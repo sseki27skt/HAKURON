@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; 序 – 楽譜記述の機械可読化による無形文化財の保護・継承・研究</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chapter1.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-89a64f88dd7f5cc3d225808ec1d4fc6b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d17b104d5b837865ffa01a6a0dcfcc41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-89a64f88dd7f5cc3d225808ec1d4fc6b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://jtab.tardate.com/javascripts/jquery.js" type="text/javascript"></script>
+<script src="https://jtab.tardate.com/javascripts/raphael.js" type="text/javascript"></script>
+<script src="https://jtab.tardate.com/javascripts/jtab.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="https://jtab.tardate.com/css/jtab-helper.css">
+<script src="src/ruby_enabler2.js"></script>
+<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css2?family=Noto+Music&amp;family=Noto+Sans" type="text/css">
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter0.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">序</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">楽譜記述の機械可読化による無形文化財の保護・継承・研究</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter0.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">序</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文化財保護と記録</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">音楽文化の記録としての譜</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">雅楽とその記録としての譜</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">楽譜の機械可読化</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">XMLを用いた雅楽譜の翻刻</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">結</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#日本伝統音楽の継承における理想と現状" id="toc-日本伝統音楽の継承における理想と現状" class="nav-link active" data-scroll-target="#日本伝統音楽の継承における理想と現状"><span class="header-section-number">1.1</span> 日本伝統音楽の継承における理想と現状</a></li>
+  <li><a href="#人文学資料のデジタル化に向けた取り組み" id="toc-人文学資料のデジタル化に向けた取り組み" class="nav-link" data-scroll-target="#人文学資料のデジタル化に向けた取り組み"><span class="header-section-number">1.2</span> 人文学資料のデジタル化に向けた取り組み</a></li>
+  <li><a href="#人文学研究におけるコンピュータの利用" id="toc-人文学研究におけるコンピュータの利用" class="nav-link" data-scroll-target="#人文学研究におけるコンピュータの利用"><span class="header-section-number">1.3</span> 人文学研究におけるコンピュータの利用</a></li>
+  <li><a href="#本研究の目的と意義" id="toc-本研究の目的と意義" class="nav-link" data-scroll-target="#本研究の目的と意義"><span class="header-section-number">1.4</span> 本研究の目的と意義</a></li>
+  <li><a href="#本論文の構成" id="toc-本論文の構成" class="nav-link" data-scroll-target="#本論文の構成"><span class="header-section-number">1.5</span> 本論文の構成</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">序</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>音楽文化の持つ長い歴史は、その伝承に対する先人たちのたゆまぬ努力によって紡がれてきた。現在を生きる私たちはその伝承の先頭に立たされ、過去の伝承を受け継ぎながら未来への伝承について向き合うことを迫られる。これは音楽に限らず人間生活が生み出した文化にあまねく当てはまることだが、その困難さは伝承の対象となる文化が置かれた状況によって大きく異なる。継承を意識して取り組むまでもなく実践知として世代を越えた伝承がなされていく文化があるのに対して、能動的に保護を働きかけていかなければ伝承が途絶えかねない文化も存在する。文化が絶えず変化していくことは確かだが、その変化の帰結として文化の喪失を許容するような適者生存の理論を文化の保存や伝承に適用することがあってはならない。一方で、残念ながら失われていく文化の存在は否定できない事実である。したがって、私たちは守るべきものを守る手立てを講じると同時に、失われゆくものを記録するという2つの作業を同時に展開することを求められている。</p>
+<section id="日本伝統音楽の継承における理想と現状" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="日本伝統音楽の継承における理想と現状"><span class="header-section-number">1.1</span> 日本伝統音楽の継承における理想と現状</h2>
+<p>音楽の保存について究極的な理想を打ち立てるのであれば、音楽行為のプロセスにおいて生み出された様々なドキュメントを適切に維持管理しながら、人間をメディアとして伝承されることが最も望ましいだろう。しかし、このような理想は多くの伝統音楽文化が置かれた実際の状況とは程遠い。事実、音楽文化の保存と継承には大きな課題を抱えている。少々古い調査だが、日本芸能実演家団体協議会による『伝統芸能の現場調査』 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> によると、調査の対象となった邦楽、邦舞、能楽、演芸、歌舞伎、文楽のうち、「後継者の先細りはしていない」と評価されたのは演芸（落語）のみであり、歌舞伎・文楽・演芸・能楽・邦楽・邦舞については、「中堅・ベテランの死亡、若い世代の不足」が指摘されている<span class="citation" data-cites="日本芸能実演家団体協議会伝統文化振興部2008">(<a href="references.html#ref-日本芸能実演家団体協議会伝統文化振興部2008" role="doc-biblioref">日本芸能実演家団体協議会伝統文化振興部 2008, 109</a>)</span>。また、歌舞伎・文楽・演芸・能楽・邦楽・邦舞は「道具・楽器等の維持・管理も重い負担、それらに使われる材料と作る職人の技術の伝承後継者とも不足」<span class="citation" data-cites="日本芸能実演家団体協議会伝統文化振興部2008">(<a href="references.html#ref-日本芸能実演家団体協議会伝統文化振興部2008" role="doc-biblioref">日本芸能実演家団体協議会伝統文化振興部 2008, 109</a>)</span>と指摘されている。さらに、邦楽・邦舞については、「公演に適したホールが、ここ10年ほどの間に相次いで閉鎖」、「専用劇場はなく、特別な育成事業は行われていない」<span class="citation" data-cites="日本芸能実演家団体協議会伝統文化振興部2008">(<a href="references.html#ref-日本芸能実演家団体協議会伝統文化振興部2008" role="doc-biblioref">日本芸能実演家団体協議会伝統文化振興部 2008, 108</a>)</span>とも指摘されている <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。 国立劇場伝統芸能伝承者養成所で行われている邦楽関連の養成事業としては、歌舞伎の竹本、鳴物、長唄が挙げられるが、日本芸能実演家団体協議会伝統文化振興部<span class="citation" data-cites="日本芸能実演家団体協議会伝統文化振興部2008">(<a href="references.html#ref-日本芸能実演家団体協議会伝統文化振興部2008" role="doc-biblioref">2008, 126</a>)</span>はこれらを歌舞伎に出演する実演家の養成を目的としたものと位置付け、邦楽の公演活動を活性化するための育成事業とはいえないと指摘している。このように、日本の伝統音楽は他の伝統芸能に比べて環境面でも人材確保の面でも対応の遅れが指摘されており、その状況は現在でもおおむね変化していない。例えば、文化庁が平成29年(2017)に文化審議会に対して行った諮問でも「現在まで守り伝えられてきた多様な文化財は、日本文化全体の豊かさの基盤。後の世代への確実な継承が必要。」と指摘する一方で、「その継承の基盤となるコミュニティ自体が脆弱化する中で、地域の文化多様性の維持・発展が脅かされつつある状況にある」と指摘されている<span class="citation" data-cites="文化庁2017a">(<a href="references.html#ref-文化庁2017a" role="doc-biblioref">文化庁 2017a</a>)</span>。また、文化庁<span class="citation" data-cites="文化庁2017">(<a href="references.html#ref-文化庁2017" role="doc-biblioref">2017b</a>)</span>の調査では「今後、文化財の保存・活用とそれによる地域振興をさらに推進していく場合、どういった課題があると思われますか。」という問いに対して、全体の35 また、2023年には日本芸術文化振興会が行なう伝統芸能伝承者養成において、文楽の研修生がゼロという事態が発生しており、公的な伝承事業の存在が担い手の育成を保障するとは限らないことが露呈した<span class="citation" data-cites="田中2023">(<a href="references.html#ref-田中2023" role="doc-biblioref">田中 2023</a>)</span>。さらには、伝統文化の拠点である国立劇場の入札不成立にともなう再整備計画の大幅な遅れなど、伝統文化を取り巻く環境は改善するどころか一層厳しい状況に陥っている。このような状況において、すべての伝統音楽文化に対して人間を介した継承の実現を訴えるのは非現実的であり、程度の差こそあれ、メディアとしての人間の不在を一定程度織り込んだ形での音楽の保存や継承を模索する必要がある。</p>
+</section>
+<section id="人文学資料のデジタル化に向けた取り組み" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="人文学資料のデジタル化に向けた取り組み"><span class="header-section-number">1.2</span> 人文学資料のデジタル化に向けた取り組み</h2>
+<p>日本の伝統音楽関連資料については国文学研究資料館、国立国会図書館、国立公文書館等が所蔵する資料の高精細画像の公開が進んでおり、従来アクセスの難しかった資料の画像が次々とインターネットに公開されている。このような、資料のデジタル画像化は貴重な有形資料の保存と公開の両立を実現するとともに、それ自体が資料に関する記録の作成であるという側面も持っている。このような取り組みと並行して、資料内部に書かれたコンテンツに対するアプローチも近年大きく進展しつつある。例えば、国立国会図書館は光学文字認識（OCR）を用いて国立国会図書館デジタルコレクションで公開をしている著作権保護期間満了となった図書および古典籍のデジタル画像からテキストを抽出し、対象資料の全文検索を実現している。また、くずし字で書かれた資料のデジタル翻刻に取り組むみんなで翻刻は、ボランティアで構成されたコミュニティによる人文学基盤の構築事例としての大きなインパクトゆえに、そこで展開されている作業が歴史資料の``翻刻’’であることの意義に光が当たりにくくなってしまっているが、この活動における極めて重要な貢献の1つは、多くの人にとって解読不可能な資料の内容に対するアクセシビリティが活動を通して飛躍的に向上し、そこから新しい発見や資料活用の可能性が開かれていくという点にあるだろう。読めない文字で書かれた資料を活字におこす翻刻作業は文献資料を扱う研究における基礎的作業であり、原資料へのアクセスを持たない人や原資料を解読できない人々にも開かれた学術資料を構築するうえで必要不可欠である。</p>
+<p>さらに、文字認識によって得られたテキストファイルの構造化によって、資料を利用しやすく、分析や再利用を容易にしようとする取り組みも徐々に展開されつつある。例えば、テキストの構造化を目指す国際的なプロジェクトであるTEIは、人文学が扱う多様なテキストの持つ構造と資料自体のメタデータを機械可読な形式で記述するためのガイドラインを提供している。このような共通の規格にしたがってテキストを構造化することで、テキストに含まれる情報の抽出が容易になるとともに、コンピュータの支援による異なる資料間の比較、統合、分析などが容易になる。また、同様のスキーマに従って構造化されたデータであれば、国際的なコミュニティの内部での円滑なデータ共有が可能になり、分析や可視化を目的とした研究支援ツールも一定の普遍性を持つことが期待される。</p>
+<p>このような資料の機械可読化は楽譜を中心とする音楽関連資料においても徐々に進展しつつある。楽譜の機械可読に向けた取り組みを展開しているMEIは、五線譜を中心とする音楽資料のデジタル化に向けたガイドラインを示している。MEIは楽譜に書かれた視覚的な側面にとどまらず、その資料内部で表現された楽曲の構造や特定の記述に対する解釈など、分析的な記述を含むデータ構造を整備している。TEI同様、国際的に共有されたデータ記述の形式を整備することでデータ共有を容易にすると同時に、可視化や分析のツールを共通化し、音楽関連資料のデジタル化における研究の基盤を整備することを目指している。</p>
+<p>本研究が扱う雅楽譜は資料の特徴として、テキストの構造化を目指すTEIと音楽資料の構造化を目指すMEIの両方に重なる特徴を持っている。すなわち、楽譜でありながらその記述には五線譜のような特別に整備された記号ではなく自然言語でも用いられる文字を用いており、文字であるにもかかわらずそこに与えられた音楽的な意味を通して演奏者に楽曲の構造や演奏の指示といった情報を提供する楽譜としての役割を果たしているのである。現状、TEIもMEIもこのようなテキストで書かれた楽譜の存在を想定したデザインにはなっていない。この2つのコミュニティは非常に強い影響関係にあるにもかかわらず、文字で書かれた楽譜という両者の専門性を足して2で割ったような存在にある資料を見落としている <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。</p>
+</section>
+<section id="人文学研究におけるコンピュータの利用" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="人文学研究におけるコンピュータの利用"><span class="header-section-number">1.3</span> 人文学研究におけるコンピュータの利用</h2>
+<p>このような人文学を対象とする研究活動においてデジタル技術が適用されることによって生じる多様な課題を扱う研究領域は現在デジタル人文学として展開されている。コンピュータの登場は、人間の記録を記録し、分析する方法として、新しい方法論を持ち込んだ。初期のコンピュータは人間に代わって膨大な計算を正確に行うことを目的として軍事方面で研究開発が進んだことは有名だが、人文学への応用も第二次世界大戦終戦後の早い時期から取り組まれている。他の学問分野とは大きく異なり、人文学分野におけるコンピュータ利用はその起源を明確に示すことができる<span class="citation" data-cites="Hockey2004">(<a href="references.html#ref-Hockey2004" role="doc-biblioref">Hockey 2004</a>)</span>。それは、1949年にスタートしたトマス・アクィナスとその関連著者の著作に登場する全単語のデジタル索引を作成するIndex Thomisticusである。</p>
+<p>トマス・アクィナスの使用したすべての単語の意味の違いを整理するという途方もない博士論文の執筆に取り組んだイエズス会神父のロベルト・ブーサ <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> は1つの単語の分析に4年を費やした自らの経験を踏まえ、コンピュータが自らの研究に役立つことを確信し、IBM創設者のトーマス・ワトソンに支援を求めた<span class="citation" data-cites="TIME1956">(<a href="references.html#ref-TIME1956" role="doc-biblioref">TIME 1956</a>)</span>。ブーサの提案から7年後、ブーサとIBMはこのプロジェクトをスタートさせ、トマス・アクィナスの全集に含まれる118作品とトマス・アクィナスに関連するとされる他の著者による61のテキスト、約1100万語がデジタル形式で収録された。また、収録されたすべての単語に対して形態素タグが付与され、見出し語の形でコンコーダンス <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> が作成されている <a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="citation" data-cites="Hockey2004">(<a href="references.html#ref-Hockey2004" role="doc-biblioref">Hockey 2004</a>)</span>。テキストはパンチカードに記録され、単語の出現回数、出現箇所、出現箇所の直前と直後の6つの単語を検索することが可能になった<span class="citation" data-cites="TIME1956">(<a href="references.html#ref-TIME1956" role="doc-biblioref">TIME 1956</a>)</span>。1人の人間が一生を費やしても終えられるか定かではない作業がコンピュータを用いることで実現したのである <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>。</p>
+<p>テキスト処理からスタートした人文学に対するコンピュータ技術の応用は、情報学の研究成果を取り込みつつ、次第にテキストの枠を超え非文字資料へと応用されていく。しかしながら、研究に対するデジタル技術の浸透度合いは分野によって大きく異なる。先ほど例に挙げたIndex Thomisticusのようなコーパスを用いた言語学研究においてコンピュータの利用が方法論にまで深く入り込んでいるのに対して、伝統的な人文学的研究手法とデジタル技術が十分に統合されているとは言い難い分野も存在する。本研究が対象とする音楽もそのひとつである。</p>
+</section>
+<section id="本研究の目的と意義" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="本研究の目的と意義"><span class="header-section-number">1.4</span> 本研究の目的と意義</h2>
+<p>そこで、本論文では日本の伝統音楽である雅楽 <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> が用いる楽譜を1つの事例として取り上げ、そのデジタル化による雅楽文化の保存と継承の可能性について検討し、具体的なデジタル化の手法としてデジタル雅楽譜(GagakuXML)の構築に取り組む。楽譜は楽曲に対する演奏者の記憶を補助するために生み出され、現在でも演奏実践の現場で参照され続けている記録の一形態である。それらの記録を適切に管理するとともに、デジタル技術を用いてその記録を機械可読な形式に変換することで、音楽文化の保存と継承に新たな可能性を提供することを目指す。当然ながら、この研究が主軸とする楽譜資料が音楽文化の記録として唯一無二の存在であるわけではなく、楽譜という記録方法そのものも、本研究によって機械可読に表現されたデジタル楽譜も、あくまでも音楽文化のごく一部をある特定の方法で表現した記録に過ぎず、人間によって媒介されてきた音楽文化そのものがデータとして保存されるわけではない。この点において本研究の限界は極めて明確である。大多数の音楽文化は人間を媒体として伝承されていくが、どれだけ技術が発達したとしてもその伝承を人間から切り離し、人間以外のメディアによって完全に置き換えることはできない。もっともこの事実は、本研究に限らず人間によって生み出された文化の記録や保存に挑むあらゆる研究に共通する現実であろう。 しかしながら、常に新しい技術や手法を取り入れながら文化財の保存と記録に挑むことの重要性はこれまでの文化財保存の歴史が示すとおりである。本研究は音楽文化の中でも、日本の伝統音楽である雅楽を具体的な検討対象として取り上げるが、その背後には文化を保存し継承するための新しい方法論の模索という、文化財保存の歴史の一環としての意義が存在するのである。</p>
+<p>数多くの音楽資料の中から楽譜を選択するのは、日本伝統音楽の中で受け継がれてきた楽譜が、かつての音楽を研究、再現するための重要な資料としてこれまでも利用されてきたためである。もちろん、音楽、特に日本の伝統音楽のような口頭伝承を主軸とした伝承文化において、楽譜という書かれた記録はあくまでも補助的な役割を果たすにとどまっており、楽譜以外にも楽書、楽器、絵図、装束など、様々な側面から雅楽の検討が積み重ねられてきた。しかし、そんな中でも、残された楽譜がかつての音楽文化を研究し、楽曲や楽器の復曲、復興のための重要な手がかりを提供していることは間違いない。有名な事例としては、正倉院に支配文書として残された「天平琵琶譜」に基づいて芝祐靖が行った復曲事業<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>などが挙げられるが、これも紙背文書として残された譜を起点として様々な検討が行われた結果もたらされた成果である。このように、楽譜は日本の伝統音楽を研究するうえで欠かすことのできない資料の一形態であり、そのデジタル化は日本の伝統音楽文化の保存と継承に寄与することが期待される。</p>
+<p>したがって、文化財保存とデジタル人文学のどちらの視点に立つかによって本研究は大きく2つの視点から位置付けられることになるだろう。文化財保存の観点で見るならば、本研究は実物資料に残された記述に関する構造化デジタルテキストの構築を通して、メディアとしての人間を介さない無形文化財の新しい記録の在り方を模索する試みとして捉えることができる。伝承に様々な課題を抱え、衰退が危惧される伝統音楽文化に関連した記録をデジタル化することで、既存の記録に対するアクセシビリティを向上させるとともに、新たな研究や伝承の基盤を整備できるだろう。一方、Music Encodingの分野から見ると、これまで欧米圏において同じ人文学資料のマークアップを議論しているのにもかかわらず、別々に議論が展開されてきたテキストと楽譜の構造化という2つの分野のはざまに存在する文字を用いた記譜法の構造化に向けた方法論を示す試みとして位置づけられる。雅楽譜を対象としたデジタル楽譜を整備することで、日本の伝統音楽資料研究に対するコンピュータの利用可能性が広がると同時に、音楽情報学研究の素材として日本の伝統音楽が候補になることも期待できる。また、非西洋音楽を対象としたMusic Encodingの議論は、欧米を中心に展開されてきたMusic Encodingの取り組みになかなか反映されてこなかった楽譜文化の多様性を当該研究分野にもたらすという点においても重要な取り組みである。</p>
+</section>
+<section id="本論文の構成" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="本論文の構成"><span class="header-section-number">1.5</span> 本論文の構成</h2>
+<p>序論に続く第 <a href="chapter1.html" class="quarto-xref"><span>2</span></a> 章では、本研究が取り組む文化の記録が文化財保護の文脈においてどのように位置付けられているのかを文化財記録の役割について検討しながら確認する。有形・無形を問わず、文化の保護をめぐる議論においては、現状を可能な限り長く保存すると同時に現状の記録を取り続けるという必要もある。ここでは、有形・無形を問わず、過去の文化財保護における保存と記録の事例を取り上げながら、無形文化財に関する記録の役割と重要性について検討する。</p>
+<p>第 <a href="chapter2.html" class="quarto-xref"><span>3</span></a> 章では、無形文化財である音楽を取り巻く記録と楽譜の関係性について、西洋音楽が育んできた楽譜文化を事例として検討する。音楽文化は様々な手段によって記録されてきたが、その内容は大きく客観的記録と自己記述的記録に分類される。西洋音楽における楽譜文化は、当事者による自己記述を通して演奏家の記憶を支援するという原初の目的に端を発し、より普遍的な記述を目指して発展した結果、音楽を客観的に記述可能な水準にまでその記述内容を高めてきた。文化を記録する手段として写真、録音等も取り上げながら、西欧音楽の記録手段としての五線譜とそれを取り巻く文化がもたらした一種の異質さについて明らかにする。</p>
+<p>第 <a href="chapter3.html" class="quarto-xref"><span>4</span></a> 章では、本論文がデジタル化に取り組む雅楽譜を育んできた雅楽そのものについて概要を示した上で、雅楽の記録として楽譜が担ってきた役割を踏まえつつ雅楽における楽譜の文化について検討する。 雅楽は日本の伝統音楽の中でも特に長い歴史を持ち、その内部には複数のジャンル、演奏形態、楽器、記譜法が存在する。本研究はその中でも唐楽中小曲譜に含まれる篳篥、龍笛、鳳笙の譜を対象として取り上げる。また、雅楽譜の具体的なマークアップに向けて雅楽譜の記述内容について整理するとともに、楽譜資料の異なるメディアへの書き換え・置き換えという点において本研究にとって重要な先行事例である五線譜化を雅楽譜の記録事業として捉え、その成果と課題を検討し、本研究が取り組む雅楽譜の符号化の位置づけを示す。</p>
+<p>第 <a href="chapter4.html" class="quarto-xref"><span>5</span></a> 章では人文学と情報技術、音楽と情報学の関わりについて整理し、楽譜の機械可読化に向けた既存の取り組みを参照しつつ、デジタル雅楽譜における情報記述の構造を提示する。 情報技術を用いた音楽関連研究は主に自動演奏、楽曲推薦、光学楽譜認識、自動採譜、楽曲生成といったトピックに取り組む情報学からのアプローチと、音楽学、音楽史学、生成批評といった人文学的なアプローチから展開されてきており、両者の間では音楽情報として必要な情報の定義や取り扱い方が大きく異なっており、現在も``機械可読な楽譜データ’’と呼ばれうる対象の内部に複数のコンセプトが混在した状況が生じている。本章ではそれらを整理するとともに、音楽学をはじめとする人文学系の領域から楽譜の機械可読化に取り組んだ既存のプロジェクトに採用されている情報記述モデルを参照しつつ、「雅楽情報記述の四領域モデル」を提示する。</p>
+<p>第 <a href="chapter5.html" class="quarto-xref"><span>6</span></a> 章ではXMLを用いて構築されるデジタル雅楽譜(GagakuXML)が持つ具体的な構造について示す。XMLの基本的な構造について触れたうえで、第3章で示した雅楽譜の特徴をXML上で再現するとともに、雅楽情報記述の四領域モデルの核となる半構造化譜字ユニットとメタデータの記述について具体的な構造を示す。また、作成したGagakuXMLを使用した簡易的な分析を示すとともに、デジタル雅楽譜を利用したさらなる資料の接続についてその可能性を示す。</p>
+<p>結論では、本研究の成果と課題についてまとめ、今後の展望について述べる。</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-AllianceofDigitalHumanitiesOrganizations2024" class="csl-entry" role="listitem">
+Alliance of Digital Humanities Organizations. 2024. <span>“About.”</span> <a href="https://adho.org/about/">https://adho.org/about/</a>.
+</div>
+<div id="ref-Busa2024" class="csl-entry" role="listitem">
+Busa, Roberto. 2024. <span>“Index <span>Thomisticus</span>.”</span> Corpus Thomisticum. <a href="https://www.corpusthomisticum.org/it/index.age">https://www.corpusthomisticum.org/it/index.age</a>.
+</div>
+<div id="ref-Hockey2004" class="csl-entry" role="listitem">
+Hockey, Susan. 2004. <span>“The <span>History</span> of <span>Humanities Computing</span>.”</span> In <em>A Companion to Digital Humanities</em>, edited by Susan Schreibman, Raymond Siemens, and John Unsworth, 3–19. Malden, MA: Blackwell Pub.
+</div>
+<div id="ref-it用語辞典バイナリ2024" class="csl-entry" role="listitem">
+IT用語辞典バイナリ. 2024. <span>“コンコーダンス.”</span> IT用語辞典バイナリ. <a href="https://www.sophia-it.com/content/コンコーダンス">https://www.sophia-it.com/content/コンコーダンス</a>.
+</div>
+<div id="ref-TIME1956" class="csl-entry" role="listitem">
+TIME. 1956. <span>“Religion: <span>Sacred Electronics</span>.”</span> TIME. <a href="https://time.com/archive/6805127/religion-sacred-electronics/">https://time.com/archive/6805127/religion-sacred-electronics/</a>.
+</div>
+<div id="ref-増本1994" class="csl-entry" role="listitem">
+増本伎共子. 1994. <span>“<span>雅楽［日本-III宮廷音楽と劇場音楽］</span>.”</span> <em>ニューグローブ音楽大辞典</em> 12: 212–16.
+</div>
+<div id="ref-宮川2021" class="csl-entry" role="listitem">
+宮川創. 2021. <span>“<span>聖書学とデジタル・ヒューマニティーズ——聖書研究ソフトウェアの現状</span>.”</span> In <em><span>欧米圏デジタル・ヒューマニティーズの基礎知識</span></em>, edited by 小風尚樹, 小川潤, 纓田宗紀, 長野壮一, 山中美潮, 宮川創, 大向一輝, and 永崎研宣, 390–95. 文学通信.
+</div>
+<div id="ref-寺内2007" class="csl-entry" role="listitem">
+寺内直子. 2007. <span>“<span>国立劇場の雅楽「復元」プロジェクトにおける「伝統」への挑戦</span>.”</span> <em>国際文化学研究 : 神戸大学国際文化学部紀要</em> 27: 51–80. <a href="https://doi.org/10.24546/81000845">https://doi.org/10.24546/81000845</a>.
+</div>
+<div id="ref-文化庁2017a" class="csl-entry" role="listitem">
+文化庁. 2017a. <span>“<span>これからの文化財の保存と活用の在り方について（諮問）</span>.”</span> <a href="https://www.bunka.go.jp/seisaku/bunkashingikai/bunkazai/kikaku/h29/01/pdf/shiryo_3.pdf">https://www.bunka.go.jp/seisaku/bunkashingikai/bunkazai/kikaku/h29/01/pdf/shiryo_3.pdf</a>.
+</div>
+<div id="ref-文化庁2017" class="csl-entry" role="listitem">
+———. 2017b. <span>“<span>文化財の地域一体での活用と地域振興に関する調査の概要</span>.”</span> <a href="https://www.bunka.go.jp/seisaku/bunkashingikai/bunkazai/kikaku/h29/06/pdf/shiryo_3.pdf">https://www.bunka.go.jp/seisaku/bunkashingikai/bunkazai/kikaku/h29/06/pdf/shiryo_3.pdf</a>.
+</div>
+<div id="ref-日本芸能実演家団体協議会伝統文化振興部2008" class="csl-entry" role="listitem">
+日本芸能実演家団体協議会伝統文化振興部. 2008. <em><span>伝統芸能の現状調査——次世代への継承・普及のために</span></em>. 日本芸能実演家団体協議会. <a href="https://geidankyo.or.jp/img/issue/dentou.pdf">https://geidankyo.or.jp/img/issue/dentou.pdf</a>.
+</div>
+<div id="ref-田中2023" class="csl-entry" role="listitem">
+田中佐和. 2023. <span>“<span>文楽「研修生」応募なし 次代への継承危機、異例の募集延長</span>.”</span> {Article.west.west\_life}. 産経新聞：産経ニュース; 産経新聞. <a href="https://www.sankei.com/article/20230422-XW36AVCLKFNXHFGWOPRGBU3ACA/">https://www.sankei.com/article/20230422-XW36AVCLKFNXHFGWOPRGBU3ACA/</a>.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>本調査における邦楽の対象ジャンルは、雅楽、声明、三曲（地歌・箏曲、尺八、胡弓楽）、義太夫、長唄（鳴物を含む）、常磐津、清元、新内、古曲（荻江節、一中節、河東節、宮薗節）、端唄・小唄、民謡、琵琶（平曲、筑前琵琶、薩摩琵琶ほか）、浪曲、能・狂言、邦楽ジョイント（邦楽の複数ジャンルによる演奏会）、他分野とのジョイント、その他。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>日本芸能実演家団体協議会伝統文化振興部<span class="citation" data-cites="日本芸能実演家団体協議会伝統文化振興部2008">(<a href="references.html#ref-日本芸能実演家団体協議会伝統文化振興部2008" role="doc-biblioref">2008, 14</a>)</span>は邦楽の演奏会に適した会場として、400席前後の観客収容数、屏風や山台といった備品とそれを設営可能な劇場スタッフ、邦楽器や邦楽の声に合った残響などの条件をあげている。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>欧米圏を中心に展開されてきたこれら2つのコミュニティにとって、この見落としはある種の必然と言っても過言ではなく、責められるものではない。西洋音楽には五線譜という極めて高い普遍性を持った音楽記述体系が存在しており、音楽の構造を書き留める手段と言語活動を書き留める手段はほとんどの場面で歴史的に切り離されてきた。もっとも、MEIはTEIから派生する形で成立したコミュニティであり、テキストとは異なる記述体系を持つ西洋音楽資料に対する最適化がその中心的な目標として掲げられていたであろうことは想像に難くない。TEIとMEIの活動によって人文学資料のデジタル化は大きく進展しており、テキストはTEI、西洋音楽はMEIというある種の役割分担は一定の成功を収めていると捉えることもできる。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>イタリア語の母音間のsはcasaのように有声音でも無声音でも読むことが可能であり、Busaの読みとしては、ブーザ、ブーサ、ブザ、ブサの4通りが考えられる<span class="citation" data-cites="宮川2021">(<a href="references.html#ref-宮川2021" role="doc-biblioref">宮川 2021</a>)</span>。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>特定の作品や文献などにおいて用いられているすべての文字列(単語)に関して、その文字列が含まれているテキストや前後の文脈などといった位置情報に関する索引やメタデータのこと<span class="citation" data-cites="it用語辞典バイナリ2024">(<a href="references.html#ref-it用語辞典バイナリ2024" role="doc-biblioref">IT用語辞典バイナリ 2024</a>)</span>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>この成果は現在Corpus Thomisticumというプロジェクトの一部としてインターネット上に公開され誰でも自由に利用できる<span class="citation" data-cites="Busa2024">(<a href="references.html#ref-Busa2024" role="doc-biblioref">Busa 2024</a>)</span>。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>ロベルト・ブーサの功績をたたえ、The Alliance of Digital Humanities Organizations(ADHO)は3年に一度、情報技術の人文学への応用に対する顕著な業績に対してRoberto Busa Prizeを贈呈している<span class="citation" data-cites="AllianceofDigitalHumanitiesOrganizations2024">(<a href="references.html#ref-AllianceofDigitalHumanitiesOrganizations2024" role="doc-biblioref">Alliance of Digital Humanities Organizations 2024</a>)</span>。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>雅楽という言葉は東アジア圏の広い地域に広がっており、中国や朝鮮半島においては、皇室や孔子廟の祭祀音楽の名称として用いられている。一方、日本の雅楽において中心的なレパートリーを構成しているのは、中国や朝鮮半島の儀式音楽、すなわち中国、朝鮮半島における雅楽ではなく、中国において燕楽と呼ばれた饗宴の楽舞であるといわれている<span class="citation" data-cites="増本1994">(<a href="references.html#ref-増本1994" role="doc-biblioref">増本 1994</a>)</span>。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>雅楽における復曲事業は1966年に開場した国立劇場による委嘱事業にその多くが拠っている。特に1975年以降、普段ほとんど演じられない、もしくは廃絶した上演方法や楽曲の復元を押し出した演奏会が行われており、そこに「天平琵琶譜」の復曲も含まれている。また、80年代に入ると復元された古代の楽器を用いた公演も行われるようになり、楽曲、理論、楽器といった複数のアプローチから復元に取り組まれている<span class="citation" data-cites="寺内2007">(<a href="references.html#ref-寺内2007" role="doc-biblioref">寺内 2007</a>)</span>。<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapter1.html" class="pagination-link" aria-label="文化財保護と記録">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">文化財保護と記録</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
