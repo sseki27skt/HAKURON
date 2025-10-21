@@ -1611,21 +1611,11 @@ window.Quarto = {
         譜字のマークアップ
        </h4>
        <p>
-        譜字が持つ要素は、文字とその大きさで構成されているため、文字を
-        <code><shoga></code>
-        、
-        <code><fuji></code>
-        、
-        <code><aitake></code>
-        でマークアップし、各要素の属性として各文字の大きさを記述していく。本論文においては、図
+        譜字が持つ要素は、文字とその大きさで構成されているため、文字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>、<code>&lt;aitake&gt;</code>でマークアップし、各要素の属性として各文字の大きさを記述していく。本論文においては、図
         <span class="math inline">
          \(\ref{オリジナル}\)
         </span>
-        のように、譜字を
-        <code><shoga></code>
-        、
-        <code><fuji></code>
-        の内容として記述する形式を採用しているが、MEIに倣って譜字を含むすべての情報を属性として記述する図
+        のように、譜字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>の内容として記述する形式を採用しているが、MEIに倣って譜字を含むすべての情報を属性として記述する図
         <span class="math inline">
          \(\ref{MEI式}\)
         </span>
@@ -1656,11 +1646,7 @@ window.Quarto = {
                </div>
               </div>
               <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0000-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-               (a)
-               <code><shoga></code>
-               および
-               <code><fuji></code>
-               で譜字をマークアップする例。
+               (a)<code>&lt;shoga&gt;</code>および<code>&lt;fuji&gt;</code>で譜字をマークアップする例。
               </figcaption>
              </figure>
             </div>
@@ -1686,13 +1672,7 @@ window.Quarto = {
                </div>
               </div>
               <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0000-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-               (b) 譜字を
-               <code><shoga></code>
-               、
-               <code><fuji></code>
-               の属性として記述する例 （MEIにおける
-               <code><note></code>
-               に準じたマークアップ例。）
+               (b) 譜字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>の属性として記述する例 （MEIにおける<code>&lt;note&gt;</code>に準じたマークアップ例。）
               </figcaption>
              </figure>
             </div>
@@ -1708,17 +1688,7 @@ window.Quarto = {
         属性と要素の使い分けには明確なルールが存在するわけではなく、どちらの方法でも同じ情報を記述することができる。しかし、MEIがすべての記述を属性として記述するスタイルを採用しているのは、西洋音楽の楽譜をマークアップする際にXMLファイル上にマークアップの対象となるテキストが存在しないためであると考えられる。一方、雅楽譜の場合は人間にとって読める文字が楽譜上のデータとして表れるため、譜字は要素としてマークアップして、要素の付加的な情報である文字の大きさを属性として記述することが適切であると考えられる。 これは、プレーンテキストとして文字起こしされたレベル0相当の雅楽譜テキストをマークアップするというデータ構築上のプロセスを反映する上でも有効な方法である。
        </p>
        <p>
-        また、笙の譜については
-        <code><cell></code>
-        の内部に
-        <code><shoga></code>
-        、
-        <code><fuji></code>
-        に代えて、
-        <code><aitake></code>
-        を記述する。
-        <code><aitake></code>
-        は合竹の譜字を記述するための要素であり、属性として
+        また、笙の譜については<code>&lt;cell&gt;</code>の内部に<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>に代えて、<code>&lt;aitake&gt;</code>を記述する。<code>&lt;aitake&gt;</code>は合竹の譜字を記述するための要素であり、属性として
         <code>
          @kigaeHyphenation
         </code>
@@ -1837,50 +1807,14 @@ window.Quarto = {
         </figure>
        </div>
        <p>
-        これらの要素は
-        <code><cell></code>
-        の直下に記述されるものと、
-        <code><cell></code>
-        とともに行を構成する要素として記述されるものに分類できる。まず、譜字に対して付与され、
-        <code><shoga></code>
-        、
-        <code><fuji></code>
-        とともに
-        <code><cell></code>
-        の子要素として記述するものは、
-        <code><hyoshi></code>
-        と、譜字と同じ行に記述される〻、動、由など演奏に関する指示に関する記号が挙げられる。 大小の別については、
-        <code><shoga></code>
-        、
-        <code><fuji></code>
-        と同様に属性として
+        これらの要素は<code>&lt;cell&gt;</code>の直下に記述されるものと、<code>&lt;cell&gt;</code>とともに行を構成する要素として記述されるものに分類できる。まず、譜字に対して付与され、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>とともに<code>&lt;cell&gt;</code>の子要素として記述するものは、<code>&lt;hyoshi&gt;</code>と、譜字と同じ行に記述される〻、動、由など演奏に関する指示に関する記号が挙げられる。 大小の別については、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>と同様に属性として
         <code>
          @type
         </code>
         に記述する。
        </p>
        <p>
-        次に
-        <code><cell></code>
-        と並列の階層に挿入する要素としては、行の始まり（line beginning）を示す
-        <code><lb/></code>
-        (line beginning)、ページの始まりを示す
-        <code><pb/></code>
-        (page beginning)、楽曲の構成や反復を支持する返付、重頭、自是などの記述が挙げられる。 既に人文学資料のマークアップ経験がある利用者のため、
-        <code><lb/></code>
-        、
-        <code><pb/></code>
-        といった要素はTEIガイドラインでも用いるものを採用する。文字としての情報を持つ楽曲構造や反復に関わる記述については楽譜上に登場する文字情報に合わせて、
-        <code><kaeshiduke></code>
-        、
-        <code><koreyori></code>
-        、
-        <code><juto></code>
-        などのタグを用意し、
-        <code><shoga></code>
-        や
-        <code><fuji></code>
-        と同じように、テキストをタグ付けする形でマークアップしていく。各要素の位置を記述する場合は
+        次に<code>&lt;cell&gt;</code>と並列の階層に挿入する要素としては、行の始まり（line beginning）を示す<code>&lt;lb/&gt;</code>(line beginning)、ページの始まりを示す<code>&lt;pb/&gt;</code>(page beginning)、楽曲の構成や反復を支持する返付、重頭、自是などの記述が挙げられる。 既に人文学資料のマークアップ経験がある利用者のため、<code>&lt;lb/&gt;</code>、<code>&lt;pb/&gt;</code>といった要素はTEIガイドラインでも用いるものを採用する。文字としての情報を持つ楽曲構造や反復に関わる記述については楽譜上に登場する文字情報に合わせて、<code>&lt;kaeshiduke&gt;</code>、<code>&lt;koreyori&gt;</code>、<code>&lt;juto&gt;</code>などのタグを用意し、<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>と同じように、テキストをタグ付けする形でマークアップしていく。各要素の位置を記述する場合は
         <code>
          @place
         </code>
@@ -1980,15 +1914,11 @@ window.Quarto = {
         <code>
          @n
         </code>
-        は重複が許される。したがって、本論文が提供するGagakuXMLでは、
-        <code><lb/></code>
-        に付与される
+        は重複が許される。したがって、本論文が提供するGagakuXMLでは、<code>&lt;lb/&gt;</code>に付与される
         <code>
          @n
         </code>
-        は行番号、
-        <code><pb/></code>
-        に付与される
+        は行番号、<code>&lt;pb/&gt;</code>に付与される
         <code>
          @n
         </code>
@@ -2035,19 +1965,7 @@ window.Quarto = {
         ここまで、楽譜上に現れる楽曲構造を示す要素についてはマークアップの構造を示してきたが、楽譜上に現れる要素は楽曲の構造に関する記述だけではない。すでに示した譜例を見ても分かるように、各楽譜の冒頭にはタイトルや楽曲の軽重を示す大曲・中曲・小曲の別、拍子、加拍子に関する情報など、楽曲そのものに関する情報が記載されている。このような情報はメタデータであると同時に、楽譜上にも現れる情報としてマークアップすることができる。
        </p>
        <p>
-        そこで、本研究が提供するスキーマでは、楽譜が持つ楽曲の構造、すなわち半構造化譜字ユニットのマークアップの全体を
-        <code><body></code>
-        としてマークアップし、それとは別にタイトル周辺の情報を
-        <code><front></code>
-        としてマークアップする。
-        <code><front></code>
-        内部には、楽譜上に現れるタイトル、大曲・中曲・小曲の区別、拍子、加拍子、後度の記述をそれぞれ、<code><title></code>、<code><sizeCategory></code>、
-        <code><hyoshi></code>
-        、
-        <code><kuwaeHyoshi></code>
-        、
-        <code><kodo></code>
-        としてマークアップする。
+        そこで、本研究が提供するスキーマでは、楽譜が持つ楽曲の構造、すなわち半構造化譜字ユニットのマークアップの全体を<code>&lt;body&gt;</code>としてマークアップし、それとは別にタイトル周辺の情報を<code>&lt;front&gt;</code>としてマークアップする。<code>&lt;front&gt;</code>内部には、楽譜上に現れるタイトル、大曲・中曲・小曲の区別、拍子、加拍子、後度の記述をそれぞれ、<code>&lt;title&gt;</code>、<code>&lt;sizeCategory&gt;</code>、<code>&lt;hyoshi&gt;</code>、<code>&lt;kuwaeHyoshi&gt;</code>、<code>&lt;kodo&gt;</code>としてマークアップする。
        </p>
       </section>
      </section>
@@ -2121,33 +2039,11 @@ window.Quarto = {
         唱歌と譜字のアラインメントのずれ
        </h4>
        <p>
-        既に述べた通り、本研究が構築したスキーマにおける
-        <code><cell></code>
-        は楽譜上において水平方向にアラインメントのとれる唱歌と譜字を含む記述のまとまりであるが、図
+        既に述べた通り、本研究が構築したスキーマにおける<code>&lt;cell&gt;</code>は楽譜上において水平方向にアラインメントのとれる唱歌と譜字を含む記述のまとまりであるが、図
         <span class="math inline">
          \(\ref{fig:アラインメントのずれ}\)
         </span>
-        に示す通り、実際の楽譜には水平方向にアラインメントの取れない唱歌と譜字が存在する。 このような
-        <code><cell></code>
-        に含むべき要素のまとまりが楽譜上の記述から明確に判断できない場合には、いくつかの対応方法が考えられる。まず、第一に、専門家による判断に基づいて、
-        <code><cell></code>
-        の内部に含む唱歌と譜字を決定する方法が考えられる。この場合、楽譜上で認められるアラインメントのずれは
-        <code><cell></code>
-        の記述としては現れないことになる。したがって、各マークアップについて、
-        <code><cell></code>
-        の例外的な運用が存在することをメタデータの形で記録しておく必要がある。第二に、
-        <code><cell></code>
-        の最初の定義に従い、アラインメントのとれない箇所については、唱歌と譜字をそれぞれ別の
-        <code><cell></code>
-        としてマークアップする方法が考えられる。この場合、アラインメントのずれは
-        <code><cell></code>
-        の記述として含まれることになる。一方、
-        <code><cell></code>
-        の処理を行う際には、その中身が
-        <code><shoga></code>
-        や
-        <code><fuji></code>
-        、もしくはその他の演奏指示を示す文字のみで構成されている可能性を考慮する必要がある。構築されたデータを使ってどのような処理を行うかによって、どちらの方法が適切かは異なるが、重要なのはスキーマがあらゆるケースに対応できるように設計されているわけではないことを理解したうえで、最適な方針を定め、それに基づいた一貫性のあるマークアップを行うことである。
+        に示す通り、実際の楽譜には水平方向にアラインメントの取れない唱歌と譜字が存在する。 このような<code>&lt;cell&gt;</code>に含むべき要素のまとまりが楽譜上の記述から明確に判断できない場合には、いくつかの対応方法が考えられる。まず、第一に、専門家による判断に基づいて、<code>&lt;cell&gt;</code>の内部に含む唱歌と譜字を決定する方法が考えられる。この場合、楽譜上で認められるアラインメントのずれは<code>&lt;cell&gt;</code>の記述としては現れないことになる。したがって、各マークアップについて、<code>&lt;cell&gt;</code>の例外的な運用が存在することをメタデータの形で記録しておく必要がある。第二に、<code>&lt;cell&gt;</code>の最初の定義に従い、アラインメントのとれない箇所については、唱歌と譜字をそれぞれ別の<code>&lt;cell&gt;</code>としてマークアップする方法が考えられる。この場合、アラインメントのずれは<code>&lt;cell&gt;</code>の記述として含まれることになる。一方、<code>&lt;cell&gt;</code>の処理を行う際には、その中身が<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>、もしくはその他の演奏指示を示す文字のみで構成されている可能性を考慮する必要がある。構築されたデータを使ってどのような処理を行うかによって、どちらの方法が適切かは異なるが、重要なのはスキーマがあらゆるケースに対応できるように設計されているわけではないことを理解したうえで、最適な方針を定め、それに基づいた一貫性のあるマークアップを行うことである。
        </p>
        <div class="quarto-layout-panel" id="fig-0123">
         <figure class="quarto-float quarto-float-fig figure">
@@ -2215,17 +2111,7 @@ window.Quarto = {
        。
       </p>
       <p>
-       これによって、XMLの構造が想定通りであるかどうか、つまりスキーマの構文に従ったvalidなものであるかを確認することができる。例えば、本論文が導入したセル概念では、1つのセルの内部に唱歌や譜字が複数含まれることはないため、セル内部に
-       <code><shoga></code>
-       や
-       <code><fuji></code>
-       が1回以上出現した場合はXMLの構造としてwell-formedであっても、今回想定しているXMLの構造には合致していない。スキーマを作成することによって、このような状態をエラーとして検出することが可能になる。本研究ではこのようなタグ同士の関係性に加え、
-       <code><shoga></code>
-       、
-       <code><fuji></code>
-       、
-       <code><aitake></code>
-       がマークアップすることのできる文字種の制約もスキーマに含めている。
+       これによって、XMLの構造が想定通りであるかどうか、つまりスキーマの構文に従ったvalidなものであるかを確認することができる。例えば、本論文が導入したセル概念では、1つのセルの内部に唱歌や譜字が複数含まれることはないため、セル内部に<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>が1回以上出現した場合はXMLの構造としてwell-formedであっても、今回想定しているXMLの構造には合致していない。スキーマを作成することによって、このような状態をエラーとして検出することが可能になる。本研究ではこのようなタグ同士の関係性に加え、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>、<code>&lt;aitake&gt;</code>がマークアップすることのできる文字種の制約もスキーマに含めている。
       </p>
       <p>
        譜字の譜字として用いられる
@@ -2284,11 +2170,7 @@ window.Quarto = {
         一方、デジタルデータとして楽譜情報を記述する場合、そのデータを解釈するのは第一にコンピュータであることを想定しなければならない。コンピュータに対してタと夕を文脈に応じて解釈するように期待することは出来ないため、人間側がデータをより正確に作成するための仕組みを持ち、データに間違いがあれば警告する仕組み作りが求められる。身の回りのあらゆる情報がグラフィカルに表現されている昨今のメディア状況においてCUIによるデータの構造化は人間にとっては非直感的な作業かもしれないが、視覚的な情報が制限されている状態は人間を構造的な記述に集中させるという点においてもメリットとなる。このように、WYSIWYGとWYSIWYMは単にインターフェイスの違いにとどまらず、データの作成において人間に何を意識させ、最終的なアウトプットとして何を求めるかという点においても大きな違いを持っている。
        </p>
        <p>
-        ただし、スキーマによる制約はデータ内容の正確性を維持するうえで有効である一方、それらが使用される状況によって適切な制約の度合いが異なることに注意する必要がある。今回整備したようなマークアップの対象にまで制約をかけるスキーマは、正確なデータを構築するという目的においては有効である一方、今回半構造化譜字ユニットの典拠とした楽譜以外を対象としたマークアップ作業中には、今回譜字として規定した文字以外の文字を
-        <code><shoga></code>
-        や
-        <code><fuji></code>
-        としてマークアップする必要が生じる可能性もある。そのような場合には、既存のスキーマに合わせる形でマークアップの対象を読み替えるのではなく、スキーマによって課される制約を調整して、マークアップすべきものを適切にマークアップできるスキーマを作成しなければならない
+        ただし、スキーマによる制約はデータ内容の正確性を維持するうえで有効である一方、それらが使用される状況によって適切な制約の度合いが異なることに注意する必要がある。今回整備したようなマークアップの対象にまで制約をかけるスキーマは、正確なデータを構築するという目的においては有効である一方、今回半構造化譜字ユニットの典拠とした楽譜以外を対象としたマークアップ作業中には、今回譜字として規定した文字以外の文字を<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>としてマークアップする必要が生じる可能性もある。そのような場合には、既存のスキーマに合わせる形でマークアップの対象を読み替えるのではなく、スキーマによって課される制約を調整して、マークアップすべきものを適切にマークアップできるスキーマを作成しなければならない
         <a class="footnote-ref" href="#fn15" id="fnref15" role="doc-noteref">
          <sup>
           15
@@ -2351,22 +2233,14 @@ window.Quarto = {
       </p>
       <section class="level4 unnumbered" id="meiが提供するmeiheadを使用したメタデータ記述">
        <h4 class="unnumbered anchored" data-anchor-id="meiが提供するmeiheadを使用したメタデータ記述">
-        MEIが提供する
-        <code><meiHead></code>
-        を使用したメタデータ記述
+        MEIが提供する<code>&lt;meiHead&gt;</code>を使用したメタデータ記述
        </h4>
        <p>
-        MEIは楽譜データのメタデータを記述するための要素として
-        <code><meiHead></code>
-        を提供している。学術利用を想定したデジタル楽譜のガイドラインを提供しているMEIは、研究者のニーズに応えうる充実したメタデータ記述の構造を持っており、図書館資料やアーカイブズ資料として音楽資料を扱うことを想定したうえで、既存のメタデータ記述に準拠したデータ記述構造を持っている。したがって、MEIが提供するメタデータ記述構造を可能な範囲で採用することで、デジタル楽譜のメタデータ記述をより効率的に行うことができる。
-        <code><meiHead></code>
-        要素の子要素としては、以下の7つの要素が記述されうる。
+        MEIは楽譜データのメタデータを記述するための要素として<code>&lt;meiHead&gt;</code>を提供している。学術利用を想定したデジタル楽譜のガイドラインを提供しているMEIは、研究者のニーズに応えうる充実したメタデータ記述の構造を持っており、図書館資料やアーカイブズ資料として音楽資料を扱うことを想定したうえで、既存のメタデータ記述に準拠したデータ記述構造を持っている。したがって、MEIが提供するメタデータ記述構造を可能な範囲で採用することで、デジタル楽譜のメタデータ記述をより効率的に行うことができる。<code>&lt;meiHead&gt;</code>要素の子要素としては、以下の7つの要素が記述されうる。
        </p>
        <ul>
         <li>
-         <p>
-          <code><altId></code>
-          (alternative identifier)
+         <p><code>&lt;altId&gt;</code>(alternative identifier)
          </p>
          <ul>
           <li>
@@ -2374,9 +2248,7 @@ window.Quarto = {
            <code>
             @xml:id
            </code>
-           の定義に合わない 、あるいは複数の識別子が必要であるなどの理由から、
-           <code><meiHead></code>
-           内の
+           の定義に合わない 、あるいは複数の識別子が必要であるなどの理由から、<code>&lt;meiHead&gt;</code>内の
            <code>
             @xml:id
            </code>
@@ -2385,9 +2257,7 @@ window.Quarto = {
          </ul>
         </li>
         <li>
-         <p>
-          <code><fileDesc></code>
-          (file description、required)
+         <p><code>&lt;fileDesc&gt;</code>(file description、required)
          </p>
          <ul>
           <li>
@@ -2396,9 +2266,7 @@ window.Quarto = {
          </ul>
         </li>
         <li>
-         <p>
-          <code><EncodingDesc></code>
-          (encoding description、optional)
+         <p><code>&lt;EncodingDesc&gt;</code>(encoding description、optional)
          </p>
          <ul>
           <li>
@@ -2407,9 +2275,7 @@ window.Quarto = {
          </ul>
         </li>
         <li>
-         <p>
-          <code><workList></code>
-          (work list、optional)
+         <p><code>&lt;workList&gt;</code>(work list、optional)
          </p>
         </li>
         <li>
@@ -2418,9 +2284,7 @@ window.Quarto = {
          </p>
         </li>
         <li>
-         <p>
-          <code><RevisionDesc></code>
-          (revision description、optional)
+         <p><code>&lt;RevisionDesc&gt;</code>(revision description、optional)
          </p>
         </li>
         <li>
@@ -2429,9 +2293,7 @@ window.Quarto = {
          </p>
         </li>
         <li>
-         <p>
-          <code><extMeta></code>
-          ~ (extended metadata)
+         <p><code>&lt;extMeta&gt;</code>~ (extended metadata)
          </p>
          <ul>
           <li>
@@ -2440,9 +2302,7 @@ window.Quarto = {
          </ul>
         </li>
         <li>
-         <p>
-          <code><manifestationList></code>
-         </p>
+         <p><code>&lt;manifestationList&gt;</code></p>
          <ul>
           <li>
            FRBRにおける体現形に関する記述、すなわちある作品が物理的な形態を伴う形で具現化された対象に関する記述が含まれる。
@@ -2451,43 +2311,25 @@ window.Quarto = {
         </li>
        </ul>
        <p>
-        この中でも、作成されたXMLファイル自体に関する情報が記述される
-        <code><fileDesc></code>
-        は必須要素とされており、TEIが提供する
-        <code><fileDesc></code>
-        とEAD が提供する
-        <code><fileDesc></code>
-        <a class="footnote-ref" href="#fn16" id="fnref16" role="doc-noteref">
+        この中でも、作成されたXMLファイル自体に関する情報が記述される<code>&lt;fileDesc&gt;</code>は必須要素とされており、TEIが提供する<code>&lt;fileDesc&gt;</code>とEAD が提供する<code>&lt;fileDesc&gt;</code><a class="footnote-ref" href="#fn16" id="fnref16" role="doc-noteref">
          <sup>
           16
          </sup>
         </a>
-        に基づいて構築されている。
-        <code><fileDesc></code>
-        の記述はデジタル楽譜の記述として重要であるだけにとどまらず、電子ファイルとして構築された音楽情報を物理的な資料を扱ってきた図書館やアーカイブズといった既存の情報資源管理のスキームに乗せるためにも慎重に記述されるべきである。
+        に基づいて構築されている。<code>&lt;fileDesc&gt;</code>の記述はデジタル楽譜の記述として重要であるだけにとどまらず、電子ファイルとして構築された音楽情報を物理的な資料を扱ってきた図書館やアーカイブズといった既存の情報資源管理のスキームに乗せるためにも慎重に記述されるべきである。
        </p>
        <p>
-        一方で、先に挙げた雅楽情報記述の四領域モデルのうち、ファクシミリ領域や時系列メディア領域といった、デジタル雅楽譜の外部に存在する情報との関連性を記述するうえでは、
-        <code><EncodingDesc></code>
-        に関するより詳細な情報記述が求められる。本研究におけるデジタル雅楽譜の場合、半構造化譜字ユニットの記述は既存の楽譜を参照して行われるため、典拠として用いた楽譜の所在や参照した楽譜の特定に関する情報は
-        <code><EncodingDesc></code>
-        に記述されるべきである。
+        一方で、先に挙げた雅楽情報記述の四領域モデルのうち、ファクシミリ領域や時系列メディア領域といった、デジタル雅楽譜の外部に存在する情報との関連性を記述するうえでは、<code>&lt;EncodingDesc&gt;</code>に関するより詳細な情報記述が求められる。本研究におけるデジタル雅楽譜の場合、半構造化譜字ユニットの記述は既存の楽譜を参照して行われるため、典拠として用いた楽譜の所在や参照した楽譜の特定に関する情報は<code>&lt;EncodingDesc&gt;</code>に記述されるべきである。
        </p>
        <p>
-        また、上記リストの最後に挙げられている
-        <code><manifestationList></code>
-        は抽象的でわかりにくい記述の説明になっているが、これはFRBRモデルにおけるManifestation（体現形）に関するメタデータ記述環境を提供するために用意されている。 FRBRは国際図書館連盟が1997年に公表した書誌情報に関する概念モデルであり、図書館情報学の分野で広く用いられている。FRBRは、書誌情報をWork（著作）、Expression（表現形）、Manifestation（体現形）、Item（個別資料）の4つのレベルに分類している。ある著作は表現形を通して実現され、表現型は体現形の中で具体化され、体現形は個別資料によって例示される、というように4つの水準における関係性が定義されており、これらのうち、具体的な実体を伴うのは個別資料のみで、他の3つは抽象的な概念である。したがって、実際にカタロギングを行う際に手元に存在するのは個別資料だけであり、アーキビストやカタロガーはそこから、著作、表現形、体現形に関する情報を記述している。
+        また、上記リストの最後に挙げられている<code>&lt;manifestationList&gt;</code>は抽象的でわかりにくい記述の説明になっているが、これはFRBRモデルにおけるManifestation（体現形）に関するメタデータ記述環境を提供するために用意されている。 FRBRは国際図書館連盟が1997年に公表した書誌情報に関する概念モデルであり、図書館情報学の分野で広く用いられている。FRBRは、書誌情報をWork（著作）、Expression（表現形）、Manifestation（体現形）、Item（個別資料）の4つのレベルに分類している。ある著作は表現形を通して実現され、表現型は体現形の中で具体化され、体現形は個別資料によって例示される、というように4つの水準における関係性が定義されており、これらのうち、具体的な実体を伴うのは個別資料のみで、他の3つは抽象的な概念である。したがって、実際にカタロギングを行う際に手元に存在するのは個別資料だけであり、アーキビストやカタロガーはそこから、著作、表現形、体現形に関する情報を記述している。
        </p>
        <p>
         このように、MEIが提供するメタデータ記述領域を使用すると、デジタル楽譜に関わる様々なメタデータ記述に幅広く対応できる。デジタル雅楽譜の作成にあたって本研究が作成したスキーマでは、図
         <span class="math inline">
          \(\ref{fig:gagakuMeta}\)
         </span>
-        のようにメタデータを記述する
-        <code><gagakuMeta></code>
-        を設け、その内部に
-        <code><meiHead></code>
-        を配置している。 本研究が提供するスキーマではMEIが提供するスキーマを内部で直接呼び出しているため、MEIで記述可能なメタデータ記述の構造は全てそのまま利用することができる。MEIのメタデータ記述構造はTEIにもよく似た構造を持っているため、テキスト資料を対象に研究をしている利用者にとっても比較的参入しやすい環境が整備できる。
+        のようにメタデータを記述する<code>&lt;gagakuMeta&gt;</code>を設け、その内部に<code>&lt;meiHead&gt;</code>を配置している。 本研究が提供するスキーマではMEIが提供するスキーマを内部で直接呼び出しているため、MEIで記述可能なメタデータ記述の構造は全てそのまま利用することができる。MEIのメタデータ記述構造はTEIにもよく似た構造を持っているため、テキスト資料を対象に研究をしている利用者にとっても比較的参入しやすい環境が整備できる。
        </p>
        <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-012345">
         <figure class="quarto-float quarto-float-fig figure">
@@ -2538,21 +2380,11 @@ window.Quarto = {
         雅楽譜独自のメタデータに関する記述
        </h4>
        <p>
-        楽譜本体の記述に先立つ題字や拍子、加拍子等の記述をマークアップするための要素として、
-        <code><front></code>
-        を設けていることは先に指摘したが、これらの要素も雅楽作品に関する重要なメタデータである。しかし、拍子や加拍子といった雅楽に独特な音楽概念はMEIが提供する
+        楽譜本体の記述に先立つ題字や拍子、加拍子等の記述をマークアップするための要素として、<code>&lt;front&gt;</code>を設けていることは先に指摘したが、これらの要素も雅楽作品に関する重要なメタデータである。しかし、拍子や加拍子といった雅楽に独特な音楽概念はMEIが提供する
         <code>
          meiHead
         </code>
-        の内部に適切な記述領域が用意されていない。 作品のタイトル、調、拍子の記述に対応するタグとしては、
-        <code><meiHead></code>
-        の内部で提供される
-        <code><title></code>
-        、
-        <code><key></code>
-        、
-        <code><meter></code>
-        などが挙げられる。しかし、西洋音楽の文脈をベースとして構築されているMEIが定義するこれらのタグが持つ概念は雅楽におけるタイトル、調子、拍子とは大きく異なっている。したがって、MEIの定義をそのまま雅楽譜に関連する情報の記述に用いてしまうと、MEIが定義するタグの意味を恣意的に読み替えることになってしまう。データの整合性を維持する上で、このようなタグが本来持つ概念とマークアップの対象との関係性を恣意的に解釈することは避けなければならない。
+        の内部に適切な記述領域が用意されていない。 作品のタイトル、調、拍子の記述に対応するタグとしては、<code>&lt;meiHead&gt;</code>の内部で提供される<code>&lt;title&gt;</code>、<code>&lt;key&gt;</code>、<code>&lt;meter&gt;</code>などが挙げられる。しかし、西洋音楽の文脈をベースとして構築されているMEIが定義するこれらのタグが持つ概念は雅楽におけるタイトル、調子、拍子とは大きく異なっている。したがって、MEIの定義をそのまま雅楽譜に関連する情報の記述に用いてしまうと、MEIが定義するタグの意味を恣意的に読み替えることになってしまう。データの整合性を維持する上で、このようなタグが本来持つ概念とマークアップの対象との関係性を恣意的に解釈することは避けなければならない。
        </p>
        <p>
         また、各楽曲が持つ情報は楽譜上に表れるものだけではない。例えば、各楽曲は特定の調子に分類されているが、調子は各楽曲の冒頭に現れない。実物の雅楽譜は、調子ごとにで冊子が分かれていることもあれば、六調子が1冊にまとめられていることもあり、後者の場合には各調子の冒頭に目次が挿入される構造をとっている。したがって、各楽曲がどの調子に該当するかを特定するためには、その楽譜が収録されている譜本の題簽を確認するか、その譜の前に挿入されている目次がどの調子のものかを確認する必要がある。このように、楽譜上には直接表れない要素の中にも、その楽曲の属性を示すものが存在する。
@@ -2565,19 +2397,7 @@ window.Quarto = {
           6.10
          </span>
         </a>
-        に示すように
-        <code><gagakuMeta></code>
-        の内部に、
-        <code><gagakuHead></code>
-        を用意している。ここには、
-        <code><front></code>
-        で記述された情報に加え、調子など、楽譜上には直接現れない情報を記述するための要素を設けた。本研究では
-        <code><front></code>
-        の記述に対して
-        <code><choshi></code>
-        を加えるにとどまったが、必要に応じてスキーマを拡張することで
-        <code><gagakuHead></code>
-        として記述すべき内容を充実させることができる。
+        に示すように<code>&lt;gagakuMeta&gt;</code>の内部に、<code>&lt;gagakuHead&gt;</code>を用意している。ここには、<code>&lt;front&gt;</code>で記述された情報に加え、調子など、楽譜上には直接現れない情報を記述するための要素を設けた。本研究では<code>&lt;front&gt;</code>の記述に対して<code>&lt;choshi&gt;</code>を加えるにとどまったが、必要に応じてスキーマを拡張することで<code>&lt;gagakuHead&gt;</code>として記述すべき内容を充実させることができる。
        </p>
       </section>
      </section>
@@ -2626,9 +2446,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (a)
-              <code><shoga></code>
-              における各譜字の出現割合
+              (a)<code>&lt;shoga&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2642,9 +2460,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (b)
-              <code><fuji></code>
-              における各譜字の出現割合
+              (b)<code>&lt;fuji&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2652,11 +2468,7 @@ window.Quarto = {
          </div>
         </div>
         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-         図&nbsp;6.11: 唐楽中小曲篳篥譜における
-         <code><shoga></code>
-         及び
-         <code><fuji></code>
-         の構成割合（壱越調）
+         図&nbsp;6.11: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（壱越調）
         </figcaption>
        </figure>
       </div>
@@ -2673,9 +2485,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (a)
-              <code><shoga></code>
-              における各譜字の出現割合
+              (a)<code>&lt;shoga&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2689,9 +2499,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (b)
-              <code><fuji></code>
-              における各譜字の出現割合
+              (b)<code>&lt;fuji&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2699,11 +2507,7 @@ window.Quarto = {
          </div>
         </div>
         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-         図&nbsp;6.12: 唐楽中小曲篳篥譜における
-         <code><shoga></code>
-         及び
-         <code><fuji></code>
-         の構成割合（平調）
+         図&nbsp;6.12: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（平調）
         </figcaption>
        </figure>
       </div>
@@ -2720,9 +2524,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (a)
-              <code><shoga></code>
-              における各譜字の出現割合
+              (a)<code>&lt;shoga&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2736,9 +2538,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (b)
-              <code><fuji></code>
-              における各譜字の出現割合
+              (b)<code>&lt;fuji&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2746,11 +2546,7 @@ window.Quarto = {
          </div>
         </div>
         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-         図&nbsp;6.13: 唐楽中小曲篳篥譜における
-         <code><shoga></code>
-         及び
-         <code><fuji></code>
-         の構成割合（双調）
+         図&nbsp;6.13: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（双調）
         </figcaption>
        </figure>
       </div>
@@ -2767,9 +2563,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (a)
-              <code><shoga></code>
-              における各譜字の出現割合
+              (a)<code>&lt;shoga&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2783,9 +2577,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (b)
-              <code><fuji></code>
-              における各譜字の出現割合
+              (b)<code>&lt;fuji&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2793,11 +2585,7 @@ window.Quarto = {
          </div>
         </div>
         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-         図&nbsp;6.14: 唐楽中小曲篳篥譜における
-         <code><shoga></code>
-         及び
-         <code><fuji></code>
-         の構成割合（黄鐘調）
+         図&nbsp;6.14: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（黄鐘調）
         </figcaption>
        </figure>
       </div>
@@ -2814,9 +2602,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (a)
-              <code><shoga></code>
-              における各譜字の出現割合
+              (a)<code>&lt;shoga&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2830,9 +2616,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (b)
-              <code><fuji></code>
-              における各譜字の出現割合
+              (b)<code>&lt;fuji&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2840,11 +2624,7 @@ window.Quarto = {
          </div>
         </div>
         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-         図&nbsp;6.15: 唐楽中小曲篳篥譜における
-         <code><shoga></code>
-         及び
-         <code><fuji></code>
-         の構成割合（盤渉調）
+         図&nbsp;6.15: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（盤渉調）
         </figcaption>
        </figure>
       </div>
@@ -2861,9 +2641,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (a)
-              <code><shoga></code>
-              における各譜字の出現割合
+              (a)<code>&lt;shoga&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2877,9 +2655,7 @@ window.Quarto = {
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              (b)
-              <code><fuji></code>
-              における各譜字の出現割合
+              (b)<code>&lt;fuji&gt;</code>における各譜字の出現割合
              </figcaption>
             </figure>
            </div>
@@ -2887,11 +2663,7 @@ window.Quarto = {
          </div>
         </div>
         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-         図&nbsp;6.16: 唐楽中小曲篳篥譜における
-         <code><shoga></code>
-         及び
-         <code><fuji></code>
-         の構成割合（太食調）
+         図&nbsp;6.16: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（太食調）
         </figcaption>
        </figure>
       </div>
@@ -3797,13 +3569,9 @@ window.Quarto = {
         <span class="math inline">
          \(\ref{fig:ヒートマップ2}\)
         </span>
-        である。上記の分析同様、&ldquo;引&rdquo;については直前の唱歌として扱い、&ldquo;丅&rdquo;および&ldquo;丄&rdquo;はそれぞれ&ldquo;下&rdquo;と&ldquo;上&rdquo;に置換して凡例を示している。 また、唱歌と譜字の両方が1つの
-        <code><cell></code>
-        に含まれているもののみを抽出しているため、唱歌単独でセルを形成する譜字はこの分析には含まれていない。
+        である。上記の分析同様、&ldquo;引&rdquo;については直前の唱歌として扱い、&ldquo;丅&rdquo;および&ldquo;丄&rdquo;はそれぞれ&ldquo;下&rdquo;と&ldquo;上&rdquo;に置換して凡例を示している。 また、唱歌と譜字の両方が1つの<code>&lt;cell&gt;</code>に含まれているもののみを抽出しているため、唱歌単独でセルを形成する譜字はこの分析には含まれていない。
        </p>
-       <p>
-        <code><cell></code>
-        の内部で譜字と対応関係を形成する唱歌は11種類あるが、唱歌ごとに対しやすい譜字に偏りが見て取れる。唱歌1つに対して平均2.82文字の譜字が対応しうるが、中には&ldquo;ヤ&rdquo;のように、1つの譜字としか対応しない唱歌や、逆に&ldquo;ル&rdquo;のように7つの譜字と対応しうる唱歌も存在する。また、共通した母音を持つ唱歌の一部（&ldquo;タ&rdquo;と&ldquo;ラ&rdquo;、&ldquo;チ&rdquo;と&ldquo;リ&rdquo;、&ldquo;テ&rdquo;と&ldquo;レ&rdquo;、&ldquo;ト&rdquo;と&ldquo;ロ&rdquo;）については、子音が異なる場合であっても、対応する譜字が概ね共通していることも確認できる。
+       <p><code>&lt;cell&gt;</code>の内部で譜字と対応関係を形成する唱歌は11種類あるが、唱歌ごとに対しやすい譜字に偏りが見て取れる。唱歌1つに対して平均2.82文字の譜字が対応しうるが、中には&ldquo;ヤ&rdquo;のように、1つの譜字としか対応しない唱歌や、逆に&ldquo;ル&rdquo;のように7つの譜字と対応しうる唱歌も存在する。また、共通した母音を持つ唱歌の一部（&ldquo;タ&rdquo;と&ldquo;ラ&rdquo;、&ldquo;チ&rdquo;と&ldquo;リ&rdquo;、&ldquo;テ&rdquo;と&ldquo;レ&rdquo;、&ldquo;ト&rdquo;と&ldquo;ロ&rdquo;）については、子音が異なる場合であっても、対応する譜字が概ね共通していることも確認できる。
        </p>
        <p>
         雅楽における唱歌の役割としては、稽古で繰り返し歌うことで&ldquo;旋律&rdquo;を覚えるという伝承習慣と関連付けて語られることが多いが、唱歌と譜字との対応関係に偏りがあることを考えると、その一部は口三味線
