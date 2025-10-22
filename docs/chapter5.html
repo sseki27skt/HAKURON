@@ -89,7 +89,7 @@ div.csl-indent {
   <script src="site_libs/quarto-search/quarto-search.js">
   </script>
   <meta content="./" name="quarto:offset">
-  <link href="./outro.html" rel="next">
+  <link href="./chapter6.html" rel="next">
   <link href="./chapter4.html" rel="prev">
   <script src="site_libs/quarto-html/quarto.js" type="module">
   </script>
@@ -415,14 +415,14 @@ window.Quarto = {
        <div class="sidebar-item-container">
         <a class="sidebar-item-text sidebar-link" href="./index.html">
          <span class="menu-text">
-          Preface
+          概要
          </span>
         </a>
        </div>
       </li>
       <li class="sidebar-item">
        <div class="sidebar-item-container">
-        <a class="sidebar-item-text sidebar-link" href="./intro.html">
+        <a class="sidebar-item-text sidebar-link" href="./chapter0.html">
          <span class="menu-text">
           <span class="chapter-number">
            1
@@ -512,7 +512,7 @@ window.Quarto = {
       </li>
       <li class="sidebar-item">
        <div class="sidebar-item-container">
-        <a class="sidebar-item-text sidebar-link" href="./outro.html">
+        <a class="sidebar-item-text sidebar-link" href="./chapter6.html">
          <span class="menu-text">
           <span class="chapter-number">
            7
@@ -1094,10 +1094,12 @@ window.Quarto = {
         レベル0の水準においては、譜字のテキストは構造化されていない単なる文字列であるが、レベル1の水準においてはそこに構造的なマークアップが施される。すなわち、デジタル雅楽譜としての最小構成がレベル1の水準に相当する。プレーンテキストとして翻刻されたテキストが持つ構造をマークアップすることで、データの分析や共有に役立つことは様々なマークアップ言語の存在が既に証明している。人文学テキストについてはTEIが、音楽学資料についてはMEIがその代表例であることは既に述べた通りである。
        </p>
        <p>
-        図
-        <span class="math inline">
-         \(\ref{fig:ABC}\)
-        </span>
+        <a class="quarto-xref" href="chapter4.html#fig-no29">
+         図&nbsp;
+         <span>
+          5.7
+         </span>
+        </a>
         でABC記譜法の例を挙げて示したとおり、五線譜資料についてはテキストにおける文字起こしに相当する作業の方法論を確立するところから全体の議論をスタートさせる必要があり、楽曲の構造的な記述とその可視化に際して求められる情報とが明確に切り分けられていたのに対して、雅楽譜を構成する譜字はテキスト情報として直接翻刻できるため、譜字領域で表現される内容はその視覚的な構成と極めて密接な関係を持っている。
        </p>
        <p>
@@ -1344,19 +1346,7 @@ window.Quarto = {
         章で触れたような大曲との関係性や楽器による楽曲の統合などは行なっていない。したがって、これらのIDは楽曲を単位とするまとまりとは対応していないことに注意する必要がある。
        </p>
        <p>
-        将来的なデジタル化資料の拡大を見据え明治撰定譜の全体に対しても同様の仕組みで、かつ人間が理解しやすいIDを付与するため、宮内庁書陵部所蔵の『雅樂譜』を構成する部、部を構成する巻、巻に含まれる曲のそれぞれに対して付与した3つの番号を2桁に揃え、それらをアンダースコアでつないだものをIDとして設定した。ただし、実際に
-        <code>
-         @xml:id
-        </code>
-        として使用する際は、冒頭に
-        <code>
-         g
-        </code>
-        を付して
-        <code>
-         @xml:id
-        </code>
-        の記述規則に対応している。本論文においてデジタル化に取り組んだ楽曲を含む、ID番号の詳細については巻末の付録A&ndash;Dを参照されたい。
+        将来的なデジタル化資料の拡大を見据え明治撰定譜の全体に対しても同様の仕組みで、かつ人間が理解しやすいIDを付与するため、宮内庁書陵部所蔵の『雅樂譜』を構成する部、部を構成する巻、巻に含まれる曲のそれぞれに対して付与した3つの番号を2桁に揃え、それらをアンダースコアでつないだものをIDとして設定した。ただし、実際に<code>@xml:id</code>として使用する際は、冒頭に<code>g</code>を付して<code>@xml:id</code>の記述規則に対応している。本論文においてデジタル化に取り組んだ楽曲を含む、ID番号の詳細については巻末の付録A&ndash;Dを参照されたい。
        </p>
       </section>
      </section>
@@ -1611,24 +1601,23 @@ window.Quarto = {
         譜字のマークアップ
        </h4>
        <p>
-        譜字が持つ要素は、文字とその大きさで構成されているため、文字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>、<code>&lt;aitake&gt;</code>でマークアップし、各要素の属性として各文字の大きさを記述していく。本論文においては、図
-        <span class="math inline">
-         \(\ref{オリジナル}\)
-        </span>
-        のように、譜字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>の内容として記述する形式を採用しているが、MEIに倣って譜字を含むすべての情報を属性として記述する図
-        <span class="math inline">
-         \(\ref{MEI式}\)
-        </span>
-        のような方法も考えられる。
+        譜字が持つ要素は、文字とその大きさで構成されているため、文字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>、<code>&lt;aitake&gt;</code>でマークアップし、各要素の属性として各文字の大きさを記述していく。本論文においては、
+        <a class="quarto-xref" href="#fig-original">
+         図&nbsp;
+         <span>
+          6.5 (a)
+         </span>
+        </a>
+        のように、譜字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>の内容として記述する形式を採用しているが、MEIに倣って譜字を含むすべての情報を属性として記述する@fig-mei のような方法も考えられる。
        </p>
        <div class="quarto-layout-panel" id="fig-1111">
         <figure class="quarto-float quarto-float-fig figure">
          <div aria-describedby="fig-1111-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
           <div class="quarto-layout-row">
            <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-1111" style="flex-basis: 50.0%;justify-content: flex-start;">
-            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0000">
+            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-original">
              <figure class="quarto-float quarto-subfloat-fig figure">
-              <div aria-describedby="fig-0000-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <div aria-describedby="fig-original-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                <div class="code-copy-outer-scaffold">
                 <div class="sourceCode" id="cb3">
                  <pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a>&lt;<span class="kw">cell</span>&gt;</span>
@@ -1645,16 +1634,16 @@ window.Quarto = {
                 </button>
                </div>
               </div>
-              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0000-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-original-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                (a)<code>&lt;shoga&gt;</code>および<code>&lt;fuji&gt;</code>で譜字をマークアップする例。
               </figcaption>
              </figure>
             </div>
            </div>
            <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-1111" style="flex-basis: 50.0%;justify-content: flex-start;">
-            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0000">
+            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-mei">
              <figure class="quarto-float quarto-subfloat-fig figure">
-              <div aria-describedby="fig-0000-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <div aria-describedby="fig-mei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                <div class="code-copy-outer-scaffold">
                 <div class="sourceCode" id="cb4">
                  <pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a>&lt;<span class="kw">cell</span>&gt;</span>
@@ -1671,7 +1660,7 @@ window.Quarto = {
                 </button>
                </div>
               </div>
-              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0000-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mei-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                (b) 譜字を<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>の属性として記述する例 （MEIにおける<code>&lt;note&gt;</code>に準じたマークアップ例。）
               </figcaption>
              </figure>
@@ -1688,27 +1677,7 @@ window.Quarto = {
         属性と要素の使い分けには明確なルールが存在するわけではなく、どちらの方法でも同じ情報を記述することができる。しかし、MEIがすべての記述を属性として記述するスタイルを採用しているのは、西洋音楽の楽譜をマークアップする際にXMLファイル上にマークアップの対象となるテキストが存在しないためであると考えられる。一方、雅楽譜の場合は人間にとって読める文字が楽譜上のデータとして表れるため、譜字は要素としてマークアップして、要素の付加的な情報である文字の大きさを属性として記述することが適切であると考えられる。 これは、プレーンテキストとして文字起こしされたレベル0相当の雅楽譜テキストをマークアップするというデータ構築上のプロセスを反映する上でも有効な方法である。
        </p>
        <p>
-        また、笙の譜については<code>&lt;cell&gt;</code>の内部に<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>に代えて、<code>&lt;aitake&gt;</code>を記述する。<code>&lt;aitake&gt;</code>は合竹の譜字を記述するための要素であり、属性として
-        <code>
-         @kigaeHyphenation
-        </code>
-        を含む場合がある。これは、ハイフンのような縦棒で繋がれた合竹の関係性を示すために用意された属性である。先にも指摘した通り、この縦棒で繋がれている合竹は気替を行わずに一息で演奏することを示している。具体的には図
-        <span class="math inline">
-         \(\ref{fig:encodingSample3}\)
-        </span>
-        縦棒で繋がれた合竹のうち、最初の合竹に
-        <code>
-         @kigaeHyphenation="begin"
-        </code>
-        、途中の合竹に
-        <code>
-         @kigaeHyphenation="middle"
-        </code>
-        、最後の合竹に
-        <code>
-         @kigaeHyphenation="end"
-        </code>
-        を記述する
+        また、笙の譜については<code>&lt;cell&gt;</code>の内部に<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>に代えて、<code>&lt;aitake&gt;</code>を記述する。<code>&lt;aitake&gt;</code>は合竹の譜字を記述するための要素であり、属性として<code>@kigaeHyphenation</code>を含む場合がある。これは、ハイフンのような縦棒で繋がれた合竹の関係性を示すために用意された属性である。先にも指摘した通り、この縦棒で繋がれている合竹は気替を行わずに一息で演奏することを示している。具体的には@fig-000000 縦棒で繋がれた合竹のうち、最初の合竹に<code>@kigaeHyphenation="begin"</code>、途中の合竹に<code>@kigaeHyphenation="middle"</code>、最後の合竹に<code>@kigaeHyphenation="end"</code>を記述する
         <a class="footnote-ref" href="#fn12" id="fnref12" role="doc-noteref">
          <sup>
           12
@@ -1807,72 +1776,19 @@ window.Quarto = {
         </figure>
        </div>
        <p>
-        これらの要素は<code>&lt;cell&gt;</code>の直下に記述されるものと、<code>&lt;cell&gt;</code>とともに行を構成する要素として記述されるものに分類できる。まず、譜字に対して付与され、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>とともに<code>&lt;cell&gt;</code>の子要素として記述するものは、<code>&lt;hyoshi&gt;</code>と、譜字と同じ行に記述される〻、動、由など演奏に関する指示に関する記号が挙げられる。 大小の別については、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>と同様に属性として
-        <code>
-         @type
-        </code>
-        に記述する。
+        これらの要素は<code>&lt;cell&gt;</code>の直下に記述されるものと、<code>&lt;cell&gt;</code>とともに行を構成する要素として記述されるものに分類できる。まず、譜字に対して付与され、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>とともに<code>&lt;cell&gt;</code>の子要素として記述するものは、<code>&lt;hyoshi&gt;</code>と、譜字と同じ行に記述される〻、動、由など演奏に関する指示に関する記号が挙げられる。 大小の別については、<code>&lt;shoga&gt;</code>、<code>&lt;fuji&gt;</code>と同様に属性として<code>@type</code>に記述する。
        </p>
        <p>
-        次に<code>&lt;cell&gt;</code>と並列の階層に挿入する要素としては、行の始まり（line beginning）を示す<code>&lt;lb/&gt;</code>(line beginning)、ページの始まりを示す<code>&lt;pb/&gt;</code>(page beginning)、楽曲の構成や反復を支持する返付、重頭、自是などの記述が挙げられる。 既に人文学資料のマークアップ経験がある利用者のため、<code>&lt;lb/&gt;</code>、<code>&lt;pb/&gt;</code>といった要素はTEIガイドラインでも用いるものを採用する。文字としての情報を持つ楽曲構造や反復に関わる記述については楽譜上に登場する文字情報に合わせて、<code>&lt;kaeshiduke&gt;</code>、<code>&lt;koreyori&gt;</code>、<code>&lt;juto&gt;</code>などのタグを用意し、<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>と同じように、テキストをタグ付けする形でマークアップしていく。各要素の位置を記述する場合は
-        <code>
-         @place
-        </code>
-        属性を、文字の向きを記述する場合は
-        <code>
-         @style
-        </code>
-        属性を用いる。
-        <code>
-         @place
-        </code>
-        はTEIに準じ、
-        <code>
-         right
-        </code>
-        、
-        <code>
-         left
-        </code>
-        、
-        <code>
-         inline
-        </code>
-        の3つの値を取る。
-        <code>
-         @style
-        </code>
-        の値は、文字が読まれる方向に応じて、
-        <code>
-         tb
-        </code>
-        (top-to- bottom)、
-        <code>
-         rl
-        </code>
-        (right-to-left)、
-        <code>
-         lr
-        </code>
-        (left-to-right)を取る。
+        次に<code>&lt;cell&gt;</code>と並列の階層に挿入する要素としては、行の始まり（line beginning）を示す<code>&lt;lb/&gt;</code>(line beginning)、ページの始まりを示す<code>&lt;pb/&gt;</code>(page beginning)、楽曲の構成や反復を支持する返付、重頭、自是などの記述が挙げられる。 既に人文学資料のマークアップ経験がある利用者のため、<code>&lt;lb/&gt;</code>、<code>&lt;pb/&gt;</code>といった要素はTEIガイドラインでも用いるものを採用する。文字としての情報を持つ楽曲構造や反復に関わる記述については楽譜上に登場する文字情報に合わせて、<code>&lt;kaeshiduke&gt;</code>、<code>&lt;koreyori&gt;</code>、<code>&lt;juto&gt;</code>などのタグを用意し、<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>と同じように、テキストをタグ付けする形でマークアップしていく。各要素の位置を記述する場合は<code>@place</code>属性を、文字の向きを記述する場合は<code>@style</code>属性を用いる。<code>@place</code>はTEIに準じ、<code>right</code>、<code>left</code>、<code>inline</code>の3つの値を取る。<code>@style</code>の値は、文字が読まれる方向に応じて、<code>tb</code>(top-to- bottom)、<code>rl</code>(right-to-left)、<code>lr</code>(left-to-right)を取る。
        </p>
-       <p>
-        <code>
-         @place
-        </code>
-        や
-        <code>
-         @style
-        </code>
-        で記述されるレイアウト関連の情報は音楽的な情報とは関連がないように思われるかもしれないが、西洋音楽における五線譜の改行位置や改頁位置が楽譜の読みやすさを支える要素として重要視されているように、雅楽譜においても何らかの情報を持っている可能性がある。実際、図
-        <span class="math inline">
-         \(\ref{fig:IHA_sample}\)
-        </span>
-        及び図
-        <span class="math inline">
-         \(\ref{fig:TUA_sample}\)
-        </span>
-        を見比べると、判型が大きく異なるにも関わらず楽譜の改行位置は概ね一致している。この例だけから断定することはできないが、宮内庁書陵部所蔵の『雅樂譜』を写した人物は、1行あたりの文字数を増やすのに十分な紙幅があったにも関わらず、オリジナルの雅楽譜が持つ改行位置を維持すべきものとして尊重している可能性がある。このような傾向は図に示すような、唱歌を含まない雅楽譜には見られないため、唱歌を譜字に併記するスタイルが浸透した後にもたらされた習慣であると考えられる。
+       <p><code>@place</code>や<code>@style</code>で記述されるレイアウト関連の情報は音楽的な情報とは関連がないように思われるかもしれないが、西洋音楽における五線譜の改行位置や改頁位置が楽譜の読みやすさを支える要素として重要視されているように、雅楽譜においても何らかの情報を持っている可能性がある。実際、
+        <a class="quarto-xref" href="#fig-no30">
+         図&nbsp;
+         <span>
+          6.1
+         </span>
+        </a>
+        及び@fig-31 を見比べると、判型が大きく異なるにも関わらず楽譜の改行位置は概ね一致している。この例だけから断定することはできないが、宮内庁書陵部所蔵の『雅樂譜』を写した人物は、1行あたりの文字数を増やすのに十分な紙幅があったにも関わらず、オリジナルの雅楽譜が持つ改行位置を維持すべきものとして尊重している可能性がある。このような傾向は図に示すような、唱歌を含まない雅楽譜には見られないため、唱歌を譜字に併記するスタイルが浸透した後にもたらされた習慣であると考えられる。
        </p>
       </section>
       <section class="level4 unnumbered" id="すべての要素に共通するグローバル属性">
@@ -1880,49 +1796,9 @@ window.Quarto = {
         すべての要素に共通するグローバル属性
        </h4>
        <p>
-        ここまで、具体的な楽譜内の記述について述べてきたが、すべてのタグに共通する属性として
-        <code>
-         @xml:id
-        </code>
-        、
-        <code>
-         @n
-        </code>
-        が存在する。
-        <code>
-         @xml:id
-        </code>
-        は各要素を一意に識別するための属性であり、各要素が持つ参照関係の記述を実現する。
-        <code>
-         @n
-        </code>
-        は楽譜内の順序を示すための属性である。
+        ここまで、具体的な楽譜内の記述について述べてきたが、すべてのタグに共通する属性として<code>@xml:id</code>、<code>@n</code>が存在する。<code>@xml:id</code>は各要素を一意に識別するための属性であり、各要素が持つ参照関係の記述を実現する。<code>@n</code>は楽譜内の順序を示すための属性である。
        </p>
-       <p>
-        <code>
-         @xml:id
-        </code>
-        は内部スペースを含まず、文字またはアンダースコアで始まり、XML仕様で定義されている文字、数字、ハイフン、アンダースコア、ピリオドで構成されることが求められる。
-        <code>
-         @n
-        </code>
-        は数字のみで構成される必要がある。
-        <code>
-         @xml:id
-        </code>
-        は1つのXML文書の内部において一意である必要があるが、
-        <code>
-         @n
-        </code>
-        は重複が許される。したがって、本論文が提供するGagakuXMLでは、<code>&lt;lb/&gt;</code>に付与される
-        <code>
-         @n
-        </code>
-        は行番号、<code>&lt;pb/&gt;</code>に付与される
-        <code>
-         @n
-        </code>
-        はページ番号を示す属性として使用している。
+       <p><code>@xml:id</code>は内部スペースを含まず、文字またはアンダースコアで始まり、XML仕様で定義されている文字、数字、ハイフン、アンダースコア、ピリオドで構成されることが求められる。<code>@n</code>は数字のみで構成される必要がある。<code>@xml:id</code>は1つのXML文書の内部において一意である必要があるが、<code>@n</code>は重複が許される。したがって、本論文が提供するGagakuXMLでは、<code>&lt;lb/&gt;</code>に付与される<code>@n</code>は行番号、<code>&lt;pb/&gt;</code>に付与される<code>@n</code>はページ番号を示す属性として使用している。
        </p>
        <div data-fig-cap="デジタル雅楽譜における`&lt;front&gt;`の記述">
         <div class="code-copy-outer-scaffold">
@@ -1984,43 +1860,44 @@ window.Quarto = {
         改行位置の相違
        </h4>
        <p>
-        図
-        <span class="math inline">
-         \(\ref{fig:改行}\)
-        </span>
-        は宮内庁書陵部が所蔵する『雅楽譜』と東京藝術大学が所蔵する『明治撰定譜』の龍笛譜 双調 の譜における改行位置の相違を示している。図
-        <span class="math inline">
-         \(\ref{fig:颯踏右}\)
-        </span>
-        では行末の唱歌が&ldquo;ロ&rdquo;で終わっているのに対して、図
-        <span class="math inline">
-         \(\ref{fig:颯踏左}\)
-        </span>
-        では行末の唱歌が&ldquo;ル&rdquo;で終わり、次の行の冒頭に&ldquo;ロ&rdquo;が現れる。このような改行位置の違いは『明治撰定譜』の編纂以降の譜はもちろんのこと、図に示したような譜字のみで構成された雅楽譜の翻刻に向けて本研究を拡張する際に特に大きな課題となるだろう。改行の位置が異なるということは、行単位で切り出される情報の内容が楽譜間で異なることを意味する。異なる楽譜資料の間で対応する記述の関係性を明示的に示すためには、各唱歌や譜字といった、行よりも細かい単位でマークアップされた情報同士を接続する必要がある。また、今後唱歌や譜字の欠損、欠落といった問題に対応しつつ2つの楽譜間の記述を接続するためにも、楽譜上に現れる文字を単位とした情報の関連性を表現する方法が求められるだろう。
+        <a class="quarto-xref" href="#fig-0123">
+         図&nbsp;
+         <span>
+          6.8
+         </span>
+        </a>
+        は宮内庁書陵部が所蔵する『雅楽譜』と東京藝術大学が所蔵する『明治撰定譜』の龍笛譜 双調 《颯踏》の譜における改行位置の相違を示している。
+        <a class="quarto-xref" href="#fig-0123b">
+         図&nbsp;
+         <span>
+          6.8 (b)
+         </span>
+        </a>
+        では行末の唱歌が&ldquo;ロ&rdquo;で終わっているのに対して、@#fig-0123a では行末の唱歌が&ldquo;ル&rdquo;で終わり、次の行の冒頭に&ldquo;ロ&rdquo;が現れる。このような改行位置の違いは『明治撰定譜』の編纂以降の譜はもちろんのこと、図に示したような譜字のみで構成された雅楽譜の翻刻に向けて本研究を拡張する際に特に大きな課題となるだろう。改行の位置が異なるということは、行単位で切り出される情報の内容が楽譜間で異なることを意味する。異なる楽譜資料の間で対応する記述の関係性を明示的に示すためには、各唱歌や譜字といった、行よりも細かい単位でマークアップされた情報同士を接続する必要がある。また、今後唱歌や譜字の欠損、欠落といった問題に対応しつつ2つの楽譜間の記述を接続するためにも、楽譜上に現れる文字を単位とした情報の関連性を表現する方法が求められるだろう。
        </p>
        <div class="quarto-layout-panel" id="fig-0123">
         <figure class="quarto-float quarto-float-fig figure">
          <div aria-describedby="fig-0123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
           <div class="quarto-layout-row">
            <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-0123" style="flex-basis: 50.0%;justify-content: flex-start;">
-            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-">
+            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0123a">
              <figure class="quarto-float quarto-subfloat-fig figure">
-              <div aria-describedby="fig--caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <div aria-describedby="fig-0123a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                <img class="img-fluid figure-img" data-ref-parent="fig-0123" src="img/双調_颯踏_宮内庁.png">
               </div>
-              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig--caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0123a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                (a) 龍笛譜 双調 《颯踏》（宮内庁書陵部所蔵）
               </figcaption>
              </figure>
             </div>
            </div>
            <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-0123" style="flex-basis: 50.0%;justify-content: flex-start;">
-            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0123-1">
+            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0123b">
              <figure class="quarto-float quarto-subfloat-fig figure">
-              <div aria-describedby="fig-0123-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <div aria-describedby="fig-0123b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                <img class="img-fluid figure-img" data-ref-parent="fig-0123" src="img/双調_颯踏_藝大.png">
               </div>
-              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0123-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0123b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                (b) 龍笛譜 双調 《颯踏》（東京藝術大学所蔵）
               </figcaption>
              </figure>
@@ -2039,35 +1916,38 @@ window.Quarto = {
         唱歌と譜字のアラインメントのずれ
        </h4>
        <p>
-        既に述べた通り、本研究が構築したスキーマにおける<code>&lt;cell&gt;</code>は楽譜上において水平方向にアラインメントのとれる唱歌と譜字を含む記述のまとまりであるが、図
-        <span class="math inline">
-         \(\ref{fig:アラインメントのずれ}\)
-        </span>
+        既に述べた通り、本研究が構築したスキーマにおける<code>&lt;cell&gt;</code>は楽譜上において水平方向にアラインメントのとれる唱歌と譜字を含む記述のまとまりであるが、
+        <a class="quarto-xref" href="#fig-0111">
+         図&nbsp;
+         <span>
+          6.9
+         </span>
+        </a>
         に示す通り、実際の楽譜には水平方向にアラインメントの取れない唱歌と譜字が存在する。 このような<code>&lt;cell&gt;</code>に含むべき要素のまとまりが楽譜上の記述から明確に判断できない場合には、いくつかの対応方法が考えられる。まず、第一に、専門家による判断に基づいて、<code>&lt;cell&gt;</code>の内部に含む唱歌と譜字を決定する方法が考えられる。この場合、楽譜上で認められるアラインメントのずれは<code>&lt;cell&gt;</code>の記述としては現れないことになる。したがって、各マークアップについて、<code>&lt;cell&gt;</code>の例外的な運用が存在することをメタデータの形で記録しておく必要がある。第二に、<code>&lt;cell&gt;</code>の最初の定義に従い、アラインメントのとれない箇所については、唱歌と譜字をそれぞれ別の<code>&lt;cell&gt;</code>としてマークアップする方法が考えられる。この場合、アラインメントのずれは<code>&lt;cell&gt;</code>の記述として含まれることになる。一方、<code>&lt;cell&gt;</code>の処理を行う際には、その中身が<code>&lt;shoga&gt;</code>や<code>&lt;fuji&gt;</code>、もしくはその他の演奏指示を示す文字のみで構成されている可能性を考慮する必要がある。構築されたデータを使ってどのような処理を行うかによって、どちらの方法が適切かは異なるが、重要なのはスキーマがあらゆるケースに対応できるように設計されているわけではないことを理解したうえで、最適な方針を定め、それに基づいた一貫性のあるマークアップを行うことである。
        </p>
-       <div class="quarto-layout-panel" id="fig-0123">
+       <div class="quarto-layout-panel" id="fig-0111">
         <figure class="quarto-float quarto-float-fig figure">
-         <div aria-describedby="fig-0123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+         <div aria-describedby="fig-0111-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
           <div class="quarto-layout-row">
-           <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-0123" style="flex-basis: 50.0%;justify-content: flex-start;">
-            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0123-1">
+           <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-0111" style="flex-basis: 50.0%;justify-content: flex-start;">
+            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0111a">
              <figure class="quarto-float quarto-subfloat-fig figure">
-              <div aria-describedby="fig-0123-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-               <img class="img-fluid figure-img" data-ref-parent="fig-0123" src="img/回盃楽_宮内庁.png">
+              <div aria-describedby="fig-0111a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+               <img class="img-fluid figure-img" data-ref-parent="fig-0111" src="img/回盃楽_宮内庁.png">
               </div>
-              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0123-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0111a-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                (a) 龍笛譜 双調 《回盃楽》（宮内庁書陵部所蔵）
               </figcaption>
              </figure>
             </div>
            </div>
-           <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-0123" style="flex-basis: 50.0%;justify-content: flex-start;">
-            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0123-1">
+           <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-0111" style="flex-basis: 50.0%;justify-content: flex-start;">
+            <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-0111b">
              <figure class="quarto-float quarto-subfloat-fig figure">
-              <div aria-describedby="fig-0123-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-               <img class="img-fluid figure-img" data-ref-parent="fig-0123" src="img/回盃楽_藝大.png">
+              <div aria-describedby="fig-0111b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+               <img class="img-fluid figure-img" data-ref-parent="fig-0111" src="img/回盃楽_藝大.png">
               </div>
-              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0123-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-0111b-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
                (b) 龍笛譜 双調 《回盃楽》（東京藝術大学所蔵）
               </figcaption>
              </figure>
@@ -2075,7 +1955,7 @@ window.Quarto = {
            </div>
           </div>
          </div>
-         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0111-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
           図&nbsp;6.9: 楽譜ごとに異なる改行位置の例
          </figcaption>
         </figure>
@@ -2285,7 +2165,7 @@ window.Quarto = {
          </p>
         </li>
         <li>
-         <p><code>&lt;extMeta&gt;</code> (extended metadata)
+         <p><code>&lt;extMeta&gt;</code>(extended metadata)
          </p>
          <ul>
           <li>
@@ -2317,10 +2197,13 @@ window.Quarto = {
         また、上記リストの最後に挙げられている<code>&lt;manifestationList&gt;</code>は抽象的でわかりにくい記述の説明になっているが、これはFRBRモデルにおけるManifestation（体現形）に関するメタデータ記述環境を提供するために用意されている。 FRBRは国際図書館連盟が1997年に公表した書誌情報に関する概念モデルであり、図書館情報学の分野で広く用いられている。FRBRは、書誌情報をWork（著作）、Expression（表現形）、Manifestation（体現形）、Item（個別資料）の4つのレベルに分類している。ある著作は表現形を通して実現され、表現型は体現形の中で具体化され、体現形は個別資料によって例示される、というように4つの水準における関係性が定義されており、これらのうち、具体的な実体を伴うのは個別資料のみで、他の3つは抽象的な概念である。したがって、実際にカタロギングを行う際に手元に存在するのは個別資料だけであり、アーキビストやカタロガーはそこから、著作、表現形、体現形に関する情報を記述している。
        </p>
        <p>
-        このように、MEIが提供するメタデータ記述領域を使用すると、デジタル楽譜に関わる様々なメタデータ記述に幅広く対応できる。デジタル雅楽譜の作成にあたって本研究が作成したスキーマでは、図
-        <span class="math inline">
-         \(\ref{fig:gagakuMeta}\)
-        </span>
+        このように、MEIが提供するメタデータ記述領域を使用すると、デジタル楽譜に関わる様々なメタデータ記述に幅広く対応できる。デジタル雅楽譜の作成にあたって本研究が作成したスキーマでは、
+        <a class="quarto-xref" href="#fig-012345">
+         図&nbsp;
+         <span>
+          6.10
+         </span>
+        </a>
         のようにメタデータを記述する<code>&lt;gagakuMeta&gt;</code>を設け、その内部に<code>&lt;meiHead&gt;</code>を配置している。 本研究が提供するスキーマではMEIが提供するスキーマを内部で直接呼び出しているため、MEIで記述可能なメタデータ記述の構造は全てそのまま利用することができる。MEIのメタデータ記述構造はTEIにもよく似た構造を持っているため、テキスト資料を対象に研究をしている利用者にとっても比較的参入しやすい環境が整備できる。
        </p>
        <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-012345">
@@ -2372,11 +2255,7 @@ window.Quarto = {
         雅楽譜独自のメタデータに関する記述
        </h4>
        <p>
-        楽譜本体の記述に先立つ題字や拍子、加拍子等の記述をマークアップするための要素として、<code>&lt;front&gt;</code>を設けていることは先に指摘したが、これらの要素も雅楽作品に関する重要なメタデータである。しかし、拍子や加拍子といった雅楽に独特な音楽概念はMEIが提供する
-        <code>
-         meiHead
-        </code>
-        の内部に適切な記述領域が用意されていない。 作品のタイトル、調、拍子の記述に対応するタグとしては、<code>&lt;meiHead&gt;</code>の内部で提供される<code>&lt;title&gt;</code>、<code>&lt;key&gt;</code>、<code>&lt;meter&gt;</code>などが挙げられる。しかし、西洋音楽の文脈をベースとして構築されているMEIが定義するこれらのタグが持つ概念は雅楽におけるタイトル、調子、拍子とは大きく異なっている。したがって、MEIの定義をそのまま雅楽譜に関連する情報の記述に用いてしまうと、MEIが定義するタグの意味を恣意的に読み替えることになってしまう。データの整合性を維持する上で、このようなタグが本来持つ概念とマークアップの対象との関係性を恣意的に解釈することは避けなければならない。
+        楽譜本体の記述に先立つ題字や拍子、加拍子等の記述をマークアップするための要素として、<code>&lt;front&gt;</code>を設けていることは先に指摘したが、これらの要素も雅楽作品に関する重要なメタデータである。しかし、拍子や加拍子といった雅楽に独特な音楽概念はMEIが提供する<code>meiHead</code>の内部に適切な記述領域が用意されていない。 作品のタイトル、調、拍子の記述に対応するタグとしては、<code>&lt;meiHead&gt;</code>の内部で提供される<code>&lt;title&gt;</code>、<code>&lt;key&gt;</code>、<code>&lt;meter&gt;</code>などが挙げられる。しかし、西洋音楽の文脈をベースとして構築されているMEIが定義するこれらのタグが持つ概念は雅楽におけるタイトル、調子、拍子とは大きく異なっている。したがって、MEIの定義をそのまま雅楽譜に関連する情報の記述に用いてしまうと、MEIが定義するタグの意味を恣意的に読み替えることになってしまう。データの整合性を維持する上で、このようなタグが本来持つ概念とマークアップの対象との関係性を恣意的に解釈することは避けなければならない。
        </p>
        <p>
         また、各楽曲が持つ情報は楽譜上に表れるものだけではない。例えば、各楽曲は特定の調子に分類されているが、調子は各楽曲の冒頭に現れない。実物の雅楽譜は、調子ごとにで冊子が分かれていることもあれば、六調子が1冊にまとめられていることもあり、後者の場合には各調子の冒頭に目次が挿入される構造をとっている。したがって、各楽曲がどの調子に該当するかを特定するためには、その楽譜が収録されている譜本の題簽を確認するか、その譜の前に挿入されている目次がどの調子のものかを確認する必要がある。このように、楽譜上には直接表れない要素の中にも、その楽曲の属性を示すものが存在する。
@@ -2412,29 +2291,35 @@ window.Quarto = {
        各調子における譜字の構成
       </h3>
       <p>
-       まず、作成したデジタル雅楽譜の記述をもとに、各調子における唱歌と譜字を構成する譜字の割合を示したのが図
-       <span class="math inline">
-        \(\ref{fig:譜字割合_壱越調}\)
-       </span>
-       から図
-       <span class="math inline">
-        \(\ref{fig:譜字割合_太食調}\)
-       </span>
+       まず、作成したデジタル雅楽譜の記述をもとに、各調子における唱歌と譜字を構成する譜字の割合を示したのが
+       <a class="quarto-xref" href="#fig-shogafuji1">
+        図&nbsp;
+        <span>
+         6.11
+        </span>
+       </a>
+       から
+       <a class="quarto-xref" href="#fig-shogafuji6">
+        図&nbsp;
+        <span>
+         6.16
+        </span>
+       </a>
        である。集計に際して、直前の唱歌を繰り返すことを示す&ldquo;引&rdquo;については、独立した譜字としてではなく、直前に現れる唱歌とみなしてカウントすることとした。また、譜字の譜字として用いられている&ldquo;丅&rdquo;および&ldquo;丄&rdquo;はグラフ描画時にレンダリングできなかったため、凡例ラベルの表示はそれぞれ&ldquo;下&rdquo;及び&ldquo;上&rdquo;の字を用いて置換している。
       </p>
       <p>
        グラフの形状から、各調子によって唱歌と譜字の構成比率が異なることがわかる。例えば、平調、盤渉調、太食調においては唱歌の&ldquo;ヲ&rdquo;と&ldquo;ア&rdquo;の割合が他と比べて高く、譜字についても、&ldquo;一&rdquo;、&ldquo;六&rdquo;、&ldquo;工&rdquo;の割合が高いことが共通している。また、壱越調、黄鐘調については、唱歌での&ldquo;イ&rdquo;の割合が他の調に比べて高いことがわかる。
       </p>
-      <div class="quarto-layout-panel" id="fig-elephants">
+      <div class="quarto-layout-panel" id="fig-shogafuji1">
        <figure class="quarto-float quarto-float-fig figure">
-        <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <div aria-describedby="fig-shogafuji1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          <div class="quarto-layout-row">
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji1" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_shoga">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_shoga_graphs/壱越調.png" title="図&nbsp;6.11&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_shoga_graphs/壱越調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji1" href="img/output_shoga_graphs/壱越調.png" title="図&nbsp;6.11&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji1" src="img/output_shoga_graphs/壱越調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2443,12 +2328,12 @@ window.Quarto = {
             </figure>
            </div>
           </div>
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji1" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_fuji">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_tetsuke_graphs/壱越調.png" title="図&nbsp;6.11&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_tetsuke_graphs/壱越調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji1" href="img/output_tetsuke_graphs/壱越調.png" title="図&nbsp;6.11&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji1" src="img/output_tetsuke_graphs/壱越調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2459,21 +2344,21 @@ window.Quarto = {
           </div>
          </div>
         </div>
-        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shogafuji1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          図&nbsp;6.11: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（壱越調）
         </figcaption>
        </figure>
       </div>
-      <div class="quarto-layout-panel" id="fig-elephants">
+      <div class="quarto-layout-panel" id="fig-shogafuji2">
        <figure class="quarto-float quarto-float-fig figure">
-        <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <div aria-describedby="fig-shogafuji2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          <div class="quarto-layout-row">
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji2" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_shoga">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_shoga_graphs/平調.png" title="図&nbsp;6.12&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_shoga_graphs/平調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji2" href="img/output_shoga_graphs/平調.png" title="図&nbsp;6.12&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji2" src="img/output_shoga_graphs/平調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2482,12 +2367,12 @@ window.Quarto = {
             </figure>
            </div>
           </div>
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji2" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_fuji">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_tetsuke_graphs/平調.png" title="図&nbsp;6.12&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_tetsuke_graphs/平調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji2" href="img/output_tetsuke_graphs/平調.png" title="図&nbsp;6.12&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji2" src="img/output_tetsuke_graphs/平調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2498,21 +2383,21 @@ window.Quarto = {
           </div>
          </div>
         </div>
-        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shogafuji2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          図&nbsp;6.12: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（平調）
         </figcaption>
        </figure>
       </div>
-      <div class="quarto-layout-panel" id="fig-elephants">
+      <div class="quarto-layout-panel" id="fig-shogafuji3">
        <figure class="quarto-float quarto-float-fig figure">
-        <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <div aria-describedby="fig-shogafuji3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          <div class="quarto-layout-row">
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji3" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_shoga">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_shoga_graphs/双調.png" title="図&nbsp;6.13&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_shoga_graphs/双調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji3" href="img/output_shoga_graphs/双調.png" title="図&nbsp;6.13&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji3" src="img/output_shoga_graphs/双調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2521,12 +2406,12 @@ window.Quarto = {
             </figure>
            </div>
           </div>
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji3" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_fuji">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_tetsuke_graphs/双調.png" title="図&nbsp;6.13&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_tetsuke_graphs/双調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji3" href="img/output_tetsuke_graphs/双調.png" title="図&nbsp;6.13&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji3" src="img/output_tetsuke_graphs/双調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2537,21 +2422,21 @@ window.Quarto = {
           </div>
          </div>
         </div>
-        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shogafuji3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          図&nbsp;6.13: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（双調）
         </figcaption>
        </figure>
       </div>
-      <div class="quarto-layout-panel" id="fig-elephants">
+      <div class="quarto-layout-panel" id="fig-shogafuji4">
        <figure class="quarto-float quarto-float-fig figure">
-        <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <div aria-describedby="fig-shogafuji4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          <div class="quarto-layout-row">
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji4" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_shoga">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_shoga_graphs/黄鐘調.png" title="図&nbsp;6.14&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_shoga_graphs/黄鐘調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji4" href="img/output_shoga_graphs/黄鐘調.png" title="図&nbsp;6.14&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji4" src="img/output_shoga_graphs/黄鐘調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2560,12 +2445,12 @@ window.Quarto = {
             </figure>
            </div>
           </div>
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji4" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_fuji">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_tetsuke_graphs/黄鐘調.png" title="図&nbsp;6.14&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_tetsuke_graphs/黄鐘調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji4" href="img/output_tetsuke_graphs/黄鐘調.png" title="図&nbsp;6.14&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji4" src="img/output_tetsuke_graphs/黄鐘調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2576,21 +2461,21 @@ window.Quarto = {
           </div>
          </div>
         </div>
-        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shogafuji4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          図&nbsp;6.14: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（黄鐘調）
         </figcaption>
        </figure>
       </div>
-      <div class="quarto-layout-panel" id="fig-elephants">
+      <div class="quarto-layout-panel" id="fig-shogafuji5">
        <figure class="quarto-float quarto-float-fig figure">
-        <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <div aria-describedby="fig-shogafuji5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          <div class="quarto-layout-row">
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji5" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_shoga">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_shoga_graphs/盤渉調.png" title="図&nbsp;6.15&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_shoga_graphs/盤渉調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji5" href="img/output_shoga_graphs/盤渉調.png" title="図&nbsp;6.15&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji5" src="img/output_shoga_graphs/盤渉調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2599,12 +2484,12 @@ window.Quarto = {
             </figure>
            </div>
           </div>
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji5" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_fuji">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_tetsuke_graphs/盤渉調.png" title="図&nbsp;6.15&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_tetsuke_graphs/盤渉調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji5" href="img/output_tetsuke_graphs/盤渉調.png" title="図&nbsp;6.15&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji5" src="img/output_tetsuke_graphs/盤渉調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2615,21 +2500,21 @@ window.Quarto = {
           </div>
          </div>
         </div>
-        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shogafuji5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          図&nbsp;6.15: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（盤渉調）
         </figcaption>
        </figure>
       </div>
-      <div class="quarto-layout-panel" id="fig-elephants">
+      <div class="quarto-layout-panel" id="fig-shogafuji6">
        <figure class="quarto-float quarto-float-fig figure">
-        <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <div aria-describedby="fig-shogafuji6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          <div class="quarto-layout-row">
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji6" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_shoga">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_shoga_graphs/太食調.png" title="図&nbsp;6.16&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_shoga_graphs/太食調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji6" href="img/output_shoga_graphs/太食調.png" title="図&nbsp;6.16&nbsp;(a): &lt;shoga&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji6" src="img/output_shoga_graphs/太食調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_shoga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2638,12 +2523,12 @@ window.Quarto = {
             </figure>
            </div>
           </div>
-          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 50.0%;justify-content: flex-start;">
+          <div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-shogafuji6" style="flex-basis: 50.0%;justify-content: flex-start;">
            <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-Ichi_fuji">
             <figure class="quarto-float quarto-subfloat-fig figure">
              <div aria-describedby="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-              <a class="lightbox" data-gallery="fig-elephants" href="img/output_tetsuke_graphs/太食調.png" title="図&nbsp;6.16&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
-               <img class="img-fluid figure-img" data-ref-parent="fig-elephants" src="img/output_tetsuke_graphs/太食調.png">
+              <a class="lightbox" data-gallery="fig-shogafuji6" href="img/output_tetsuke_graphs/太食調.png" title="図&nbsp;6.16&nbsp;(b): &lt;fuji&gt;における各譜字の出現割合">
+               <img class="img-fluid figure-img" data-ref-parent="fig-shogafuji6" src="img/output_tetsuke_graphs/太食調.png">
               </a>
              </div>
              <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-Ichi_fuji-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2654,7 +2539,7 @@ window.Quarto = {
           </div>
          </div>
         </div>
-        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+        <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shogafuji6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
          図&nbsp;6.16: 唐楽中小曲篳篥譜における<code>&lt;shoga&gt;</code>及び<code>&lt;fuji&gt;</code>の構成割合（太食調）
         </figcaption>
        </figure>
@@ -3507,11 +3392,7 @@ window.Quarto = {
        </figure>
       </div>
       <p>
-       また、譜字の出現回数に基づいた各調子のコサイン類似度を示したのが図
-       <span class="math inline">
-        \(\ref{fig:ヒートマップ1}\)
-       </span>
-       のヒートマップである。唱歌を構成する譜字については先に指摘した通り、平調&ndash;盤渉調&ndash;太食調の間に出現傾向の類似性が確認できる。一方、譜字については、壱越調&ndash;平調&ndash;盤渉調&ndash;太食調のに譜字出現傾向の類似性が認められる一方、黄鐘調&ndash;双調及び黄鐘調&ndash;盤渉調の組み合わせは全ての組み合わせの中で最も類似度が低い組み合わせであることが数値として示されている。
+       また、譜字の出現回数に基づいた各調子のコサイン類似度を示したのが@fig-heatmap のヒートマップである。唱歌を構成する譜字については先に指摘した通り、平調&ndash;盤渉調&ndash;太食調の間に出現傾向の類似性が確認できる。一方、譜字については、壱越調&ndash;平調&ndash;盤渉調&ndash;太食調のに譜字出現傾向の類似性が認められる一方、黄鐘調&ndash;双調及び黄鐘調&ndash;盤渉調の組み合わせは全ての組み合わせの中で最も類似度が低い組み合わせであることが数値として示されている。
       </p>
       <div class="quarto-layout-panel" id="fig-heatmap">
        <figure class="quarto-float quarto-float-fig figure">
@@ -3557,11 +3438,7 @@ window.Quarto = {
         唱歌に対する譜字の組み合わせ頻度
        </h4>
        <p>
-        セルの内部に生じる唱歌と譜字の組み合わせを抽出し、唱歌の譜字に対してどの譜字が付与される傾向があるかを示したのが図
-        <span class="math inline">
-         \(\ref{fig:ヒートマップ2}\)
-        </span>
-        である。上記の分析同様、&ldquo;引&rdquo;については直前の唱歌として扱い、&ldquo;丅&rdquo;および&ldquo;丄&rdquo;はそれぞれ&ldquo;下&rdquo;と&ldquo;上&rdquo;に置換して凡例を示している。 また、唱歌と譜字の両方が1つの<code>&lt;cell&gt;</code>に含まれているもののみを抽出しているため、唱歌単独でセルを形成する譜字はこの分析には含まれていない。
+        セルの内部に生じる唱歌と譜字の組み合わせを抽出し、唱歌の譜字に対してどの譜字が付与される傾向があるかを示したのが@fig-headmap2 である。上記の分析同様、&ldquo;引&rdquo;については直前の唱歌として扱い、&ldquo;丅&rdquo;および&ldquo;丄&rdquo;はそれぞれ&ldquo;下&rdquo;と&ldquo;上&rdquo;に置換して凡例を示している。また、唱歌と譜字の両方が1つの<code>&lt;cell&gt;</code>に含まれているもののみを抽出しているため、唱歌単独でセルを形成する譜字はこの分析には含まれていない。
        </p>
        <p><code>&lt;cell&gt;</code>の内部で譜字と対応関係を形成する唱歌は11種類あるが、唱歌ごとに対しやすい譜字に偏りが見て取れる。唱歌1つに対して平均2.82文字の譜字が対応しうるが、中には&ldquo;ヤ&rdquo;のように、1つの譜字としか対応しない唱歌や、逆に&ldquo;ル&rdquo;のように7つの譜字と対応しうる唱歌も存在する。また、共通した母音を持つ唱歌の一部（&ldquo;タ&rdquo;と&ldquo;ラ&rdquo;、&ldquo;チ&rdquo;と&ldquo;リ&rdquo;、&ldquo;テ&rdquo;と&ldquo;レ&rdquo;、&ldquo;ト&rdquo;と&ldquo;ロ&rdquo;）については、子音が異なる場合であっても、対応する譜字が概ね共通していることも確認できる。
        </p>
@@ -3574,15 +3451,15 @@ window.Quarto = {
         </a>
         のように、楽器の演奏方法に関連する情報が間接的に織り込まれていることが示唆される。従来、このような唱歌と譜字の緩やかな関連性は、稽古の中で無意識的に習得されてきたと考えられるが、それをこのようにデータとして可視化することで、雅楽の演奏伝承や演奏の習得における知識の伝達のあり方についての新たな視点を提供することができる。
        </p>
-       <div class="quarto-figure quarto-figure-center">
-        <figure class="figure">
-         <p>
-          <a class="lightbox" data-gallery="quarto-lightbox-gallery-18" href="img/graph/唱歌手付ヒートマップ3.png" title="各唱歌に対する譜字の頻度">
-           <img alt="各唱歌に対する譜字の頻度" class="img-fluid figure-img" src="img/graph/唱歌手付ヒートマップ3.png">
+       <div class="lightbox quarto-float quarto-figure quarto-figure-center anchored" id="fig-headmap2">
+        <figure class="quarto-float quarto-float-fig figure">
+         <div aria-describedby="fig-headmap2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+          <a class="lightbox" data-gallery="quarto-lightbox-gallery-18" href="img/graph/唱歌手付ヒートマップ3.png" title="図&nbsp;6.18: 各唱歌に対する譜字の頻度">
+           <img class="img-fluid figure-img" src="img/graph/唱歌手付ヒートマップ3.png">
           </a>
-         </p>
-         <figcaption>
-          各唱歌に対する譜字の頻度
+         </div>
+         <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-headmap2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+          図&nbsp;6.18: 各唱歌に対する譜字の頻度
          </figcaption>
         </figure>
        </div>
@@ -3603,9 +3480,12 @@ window.Quarto = {
       雅楽情報のネットワーク化に向けた展望
      </h2>
      <p>
-      <span class="math inline">
-       \(\ref{cha:楽譜の機械可読化}\)
-      </span>
+      第
+      <a class="quarto-xref" href="chapter4.html">
+       <span>
+        5
+       </span>
+      </a>
       章で示したように、GagakuXMLは雅楽関連情報の接続によって、雅楽に関わる多様な情報を統合的に扱うための基盤となることを想定している。本研究が提供するGagakuXMLにおける半構造化譜字ユニットとメタデータに関する記述は、それ自体が分析の対象となりうると同時に、雅楽情報を統合的に扱う上で1つの基礎となる構造でもある。
      </p>
      <p>
@@ -3622,7 +3502,7 @@ window.Quarto = {
        第
        <a class="quarto-xref" href="chapter4.html">
         <span>
-         チャプター 5
+         5
         </span>
        </a>
        章で示したように、本研究が提示する雅楽情報記述モデルの半構造化譜字ユニットは既存の雅楽譜を典拠として構築されることを想定している。そのため、典拠とした雅楽譜の版面画像との接続は、半構造化譜字ユニットの記述内容に関する事後検証可能性を高め、翻刻に対する信頼性を向上させるために、GagakuXMLを用いた雅楽情報ネットワークの構築において最初に検討されるべき課題である。
@@ -3640,7 +3520,7 @@ window.Quarto = {
           <img class="img-fluid figure-img" src="img/anotation.png">
          </div>
          <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-IIIF-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-          図&nbsp;6.18: IIIF Curation Viewerを用いたアノテーションの例
+          図&nbsp;6.19: IIIF Curation Viewerを用いたアノテーションの例
           <a class="footnote-ref" href="#fn18" id="fnref18" role="doc-noteref">
            <sup>
             18
@@ -3653,7 +3533,7 @@ window.Quarto = {
         <a class="quarto-xref" href="#fig-IIIF">
          図&nbsp;
          <span>
-          6.18
+          6.19
          </span>
         </a>
         は、人文学オープンデータ共同利用センターが提供しているIIIF Curation Viewer
@@ -4123,15 +4003,14 @@ window.Quarto = {
         GUIを搭載した楽譜制作ソフトウェアがユーザーに視覚的な要素を意識させやすいが故にデータとしての整合性が二の次になってしまうという問題はデータ構築において大きな問題になるが、楽譜版面の構成における純粋な柔軟性という点で比較するとGUIを搭載した楽譜制作ソフトウェアよりもCUIで入力を行う楽譜組版ソフトウェアのほうが勝っていた時代があり、その傾向は古楽や現代音楽といった特殊な楽譜において一部で現在でも認められる。確かにGUIを搭載した楽譜ソフトウェアは記号や文字を楽譜上で比較的自由に配置できるが、一方で既に画面上に現れている音楽構造から逸脱しようとすると途端に設定画面を深いところまで探る必要が出てくる。当然、一般的な楽譜制作ソフトウェアはユーザーにとってより使いやすい機能を追求することで発展してきており、拍子記号が示す1小節分の音価を使い切ったら次の小節へとカーソルが勝手に移動し、拍子記号の定義以上の拍が1小節に含まれる状態を回避しようとする。このような機能は一般的にユーザーにとって便利であり、記譜法に関する細かいルールを把握していなくても比較的正しい楽譜が作成できるというメリットがある。
        </p>
        <p>
-        一方、例えば、図
-        <span class="math inline">
-         \(\ref{fig:篳篥音域}\)
-        </span>
-        や図
-        <span class="math inline">
-         \(\ref{fig:龍笛音域譜字}\)
-        </span>
-        の音域図内で用いた楽譜のように、1小節の内部で全音符を複数表示させるといった特殊なニーズに応えるためには、楽譜上で表現される記譜法や音楽理論の正しさではなく、入力として与えた構造記述を忠実に出力することが求められる。人間の入力に対して忠実であるということは、人間側にレイアウトに関する細かい指定を要求するという煩雑さと表裏一体であり、ユーザーは楽譜組版や記譜法に関する規則を網羅的に把握しておく必要があり、仮にも楽譜組版ソフトが定義する構文から外れた記述が1か所でもあれば楽譜自体が出力されない。一方で、その構文さえ守れていればGUIを搭載した楽譜制作ソフトウェア以上に柔軟なレイアウトが実現できる。
+        一方、例えば、
+        <a class="quarto-xref" href="chapter3.html#fig-no14">
+         図&nbsp;
+         <span>
+          4.3
+         </span>
+        </a>
+        や@fig-no15 の音域図内で用いた楽譜のように、1小節の内部で全音符を複数表示させるといった特殊なニーズに応えるためには、楽譜上で表現される記譜法や音楽理論の正しさではなく、入力として与えた構造記述を忠実に出力することが求められる。人間の入力に対して忠実であるということは、人間側にレイアウトに関する細かい指定を要求するという煩雑さと表裏一体であり、ユーザーは楽譜組版や記譜法に関する規則を網羅的に把握しておく必要があり、仮にも楽譜組版ソフトが定義する構文から外れた記述が1か所でもあれば楽譜自体が出力されない。一方で、その構文さえ守れていればGUIを搭載した楽譜制作ソフトウェア以上に柔軟なレイアウトが実現できる。
        </p>
        <p>
         このような楽譜制作ソフトウェアにおけるGUIとCUIに対するニーズに関して、CUIを搭載した楽譜組版ソフトとしてMusiXと並んで現在でも開発が続いているPhilip&rsquo;s Music Scribeの開発者であるPhilip Hazelは作曲家や編曲家が直感的に操作できるWYSIWYGエディタを好む一方、思い通りの紙面構成を実現するための学習を厭わない楽譜出版者はWYSIWYMなソフトウェアを好む傾向にあると述べている
@@ -4669,7 +4548,7 @@ window.Quarto = {
      </a>
     </div>
     <div class="nav-page nav-page-next">
-     <a aria-label="結" class="pagination-link" href="./outro.html">
+     <a aria-label="結" class="pagination-link" href="./chapter6.html">
       <span class="nav-page-text">
        <span class="chapter-number">
         7

@@ -415,14 +415,14 @@ window.Quarto = {
        <div class="sidebar-item-container">
         <a class="sidebar-item-text sidebar-link" href="./index.html">
          <span class="menu-text">
-          Preface
+          概要
          </span>
         </a>
        </div>
       </li>
       <li class="sidebar-item">
        <div class="sidebar-item-container">
-        <a class="sidebar-item-text sidebar-link" href="./intro.html">
+        <a class="sidebar-item-text sidebar-link" href="./chapter0.html">
          <span class="menu-text">
           <span class="chapter-number">
            1
@@ -512,7 +512,7 @@ window.Quarto = {
       </li>
       <li class="sidebar-item">
        <div class="sidebar-item-container">
-        <a class="sidebar-item-text sidebar-link" href="./outro.html">
+        <a class="sidebar-item-text sidebar-link" href="./chapter6.html">
          <span class="menu-text">
           <span class="chapter-number">
            7
@@ -787,7 +787,7 @@ window.Quarto = {
         <span class="citation" data-cites="Zeng2021">
          (
          <a href="references.html#ref-Zeng2021" role="doc-biblioref">
-          Zeng et al. 2021
+          Zeng ほか 2021
          </a>
          )
         </span>
@@ -906,15 +906,7 @@ window.Quarto = {
           13
          </sup>
         </a>
-        の4つの情報が1つのセットとして記述され、
-        <code>
-         Note on
-        </code>
-        と
-        <code>
-         Note off
-        </code>
-        を繰り返すことで旋律が記述されていく。MIDIは基本的に単純な旋律運動の伝達機能しか持っていないが、その高い汎用性によってあらゆる電子楽器をつなげる&ldquo;電子楽器の楽譜&rdquo;の標準規格として広く浸透し、楽譜知識の記述にも大きく影響を与えている。
+        の4つの情報が1つのセットとして記述され、<code>Note on</code>と<code>Note off</code>を繰り返すことで旋律が記述されていく。MIDIは基本的に単純な旋律運動の伝達機能しか持っていないが、その高い汎用性によってあらゆる電子楽器をつなげる&ldquo;電子楽器の楽譜&rdquo;の標準規格として広く浸透し、楽譜知識の記述にも大きく影響を与えている。
        </p>
        <div class="quarto-float quarto-figure quarto-figure-center anchored" id="tbl-midivelocity">
         <figure class="quarto-float quarto-float-tbl figure">
@@ -1192,68 +1184,20 @@ window.Quarto = {
         DARMSの記述構造
        </h4>
        <p>
-        DARMSの記述は
-        <code>
-         !
-        </code>
-        から始まる複数のグローバル指定子で始まる。
+        DARMSの記述は<code>!</code>から始まる複数のグローバル指定子で始まる。
         <a class="quarto-xref" href="#fig-no24">
          図&nbsp;
          <span>
           5.1
          </span>
         </a>
-        の場合は、楽譜が含む楽器の数（
-        <code>
-         !In
-        </code>
-        ）、音部記号（
-        <code>
-         !G
-        </code>
-        、
-        <code>
-         !F
-        </code>
-        、
-        <code>
-         !C
-        </code>
-        ）、拍子（
-        <code>
-         !Mn:n
-        </code>
-        ）が含まれる
+        の場合は、楽譜が含む楽器の数（<code>!In</code>）、音部記号（<code>!G</code>、<code>!F</code>、<code>!C</code>）、拍子（<code>!Mn:n</code>）が含まれる
         <a class="footnote-ref" href="#fn15" id="fnref15" role="doc-noteref">
          <sup>
           15
          </sup>
         </a>
-        。続いて、各楽器の楽譜が音符の位置（
-        <code>
-         1
-        </code>
-        、
-        <code>
-         2
-        </code>
-        、
-        <code>
-         3
-        </code>
-        など）と音符の長さ（
-        <code>
-         Q
-        </code>
-        (四分音符)、
-        <code>
-         H
-        </code>
-        （二分音符）、
-        <code>
-         W
-        </code>
-        （全音符）など）の組み合わせで記述される。音高を記述する方法は@fig-no25 のように、五線譜の線と間を順に数字で示す方法を採用している。同じ位置に符頭が配置されていたとしても、実際の音の高さは音部記号によって変化するが、五線の線と間を楽譜記述に採用することで、音の高さを正確に読み取ることができなくても、楽譜の入力ができる。これは、「楽譜が読めない人でも楽譜を作成可能にする」というDARMSのコンセプトを実現するための工夫である。
+        。続いて、各楽器の楽譜が音符の位置（<code>1</code>、<code>2</code>、<code>3</code>など）と音符の長さ（<code>Q</code>(四分音符)、<code>H</code>（二分音符）、<code>W</code>（全音符）など）の組み合わせで記述される。音高を記述する方法は@fig-no25 のように、五線譜の線と間を順に数字で示す方法を採用している。同じ位置に符頭が配置されていたとしても、実際の音の高さは音部記号によって変化するが、五線の線と間を楽譜記述に採用することで、音の高さを正確に読み取ることができなくても、楽譜の入力ができる。これは、「楽譜が読めない人でも楽譜を作成可能にする」というDARMSのコンセプトを実現するための工夫である。
        </p>
        <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-no24">
         <figure class="quarto-float quarto-float-fig figure">
@@ -1489,11 +1433,7 @@ window.Quarto = {
           5.3
          </span>
         </a>
-        に示すように、目録データ作成の習慣に合わせた記述形式であるPAEは非常にシンプルな構造で構成されている。アーカイブズ資料としての楽譜を主な記述対象とすることから、図
-        <span class="math inline">
-         \(\ref{fig:brevis}\)
-        </span>
-        に示すような古い楽譜の記述にまでサポートが及んでおり、シンプルながら目録作成という特殊なニーズに対応した楽譜記述フォーマットになっている。 器楽作品の場合は最初の数小節を、声楽作品の場合は冒頭の歌詞を使用し、少なくとも3小節、10音符以上を含めることが推奨されている。複数の声部がある場合などに楽曲のどこを入力するかは入力作業者に委ねられているが、音楽的に意味のある箇所を選択することが求められており、主には主旋律を担当することの多いヴァイオリン、もしくは最高音部を担当する楽器のパートが選択されることが多い。
+        に示すように、目録データ作成の習慣に合わせた記述形式であるPAEは非常にシンプルな構造で構成されている。アーカイブズ資料としての楽譜を主な記述対象とすることから、@#fig-no27 に示すような古い楽譜の記述にまでサポートが及んでおり、シンプルながら目録作成という特殊なニーズに対応した楽譜記述フォーマットになっている。 器楽作品の場合は最初の数小節を、声楽作品の場合は冒頭の歌詞を使用し、少なくとも3小節、10音符以上を含めることが推奨されている。複数の声部がある場合などに楽曲のどこを入力するかは入力作業者に委ねられているが、音楽的に意味のある箇所を選択することが求められており、主には主旋律を担当することの多いヴァイオリン、もしくは最高音部を担当する楽器のパートが選択されることが多い。
        </p>
        <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-no26">
         <figure class="quarto-float quarto-float-fig figure">
@@ -1663,7 +1603,7 @@ window.Quarto = {
         <span class="citation" data-cites="Plaksin2019">
          (
          <a href="references.html#ref-Plaksin2019" role="doc-biblioref">
-          Plaksin and Olley 2019
+          Plaksin と Olley 2019
          </a>
          )
         </span>
@@ -2083,27 +2023,7 @@ window.Quarto = {
        。 一方、当然ではあるが、五線譜は専用にデザインされた独自の記号や記述体系を有しており、それらをプレーンテキストで直接文字起こしすることはできない。したがって、何らかの形で五線譜の記述を文テキスト化しようとする場合には、音楽記号が配置された楽譜の状況から人間が読み取った音楽の&ldquo;構造&rdquo;を記述することが常に求められてきた。
       </p>
       <p>
-       先に取り上げたPAEは音楽目録の作成という限られた用途を想定して五線譜上の記述から読み取った内容をプレーンテキストとして記述する枠組みを提供していたが、より一般的な用途を目的としたプレーンテキストによる音楽構造の記述形式としてはABC記譜法が挙げられる。ABC記譜法は民謡採集を当初の目的として1993年にリリースされたフォーマットであり、冒頭に楽曲のID（
-       <code>
-        X
-       </code>
-       ）、タイトル（
-       <code>
-        T
-       </code>
-       ）、拍子記号（
-       <code>
-        M
-       </code>
-       ）、1文字が小節内において占める音価（
-       <code>
-        L
-       </code>
-       ）、調（
-       <code>
-        K
-       </code>
-       ）が簡易的なメタデータとして示され、その後に西洋音楽が用いるCDEFGABの音名を用いた楽譜が続く
+       先に取り上げたPAEは音楽目録の作成という限られた用途を想定して五線譜上の記述から読み取った内容をプレーンテキストとして記述する枠組みを提供していたが、より一般的な用途を目的としたプレーンテキストによる音楽構造の記述形式としてはABC記譜法が挙げられる。ABC記譜法は民謡採集を当初の目的として1993年にリリースされたフォーマットであり、冒頭に楽曲のID（<code>X</code>）、タイトル（<code>T</code>）、拍子記号（<code>M</code>）、1文字が小節内において占める音価（<code>L</code>）、調（<code>K</code>）が簡易的なメタデータとして示され、その後に西洋音楽が用いるCDEFGABの音名を用いた楽譜が続く
        <span class="citation" data-cites="Walshaw2024">
         (
         <a href="references.html#ref-Walshaw2024" role="doc-biblioref">
@@ -2527,10 +2447,12 @@ window.Quarto = {
       西洋音楽において作品の自律性が強調され、楽譜が作曲家の意図として扱われうるのとは対象的に、口伝による音楽伝承に支えられている雅楽の文化における楽譜はあくまでも演奏のための手控えであり、その情報は読み手の経験や知識を前提にして構成されている。また、西洋音楽において演奏が楽譜に書かれた作品の解釈として位置づけられるのとは異なり、雅楽における演奏は演奏者の身的な記憶によってもたらされるものであり、演奏を楽譜の解釈として位置づけることはできない。
      </p>
      <p>
-      雅楽の文化においてその中心として位置づけられるのは常に人間による音楽実践であり、相対的に見ればその他の資料はいずれも周辺的な存在に過ぎない。この事実は雅楽と雅楽譜という関係に限らず、人間による文化と所産という関係全般においても言えることであろう。
-      <span class="math inline">
-       \(\ref{chap:文化財保護と記録}\)
-      </span>
+      雅楽の文化においてその中心として位置づけられるのは常に人間による音楽実践であり、相対的に見ればその他の資料はいずれも周辺的な存在に過ぎない。この事実は雅楽と雅楽譜という関係に限らず、人間による文化と所産という関係全般においても言えることであろう。第
+      <a class="quarto-xref" href="chapter1.html">
+       <span>
+        チャプター 2
+       </span>
+      </a>
       章で指摘したように、あらゆる有形の文化財の背後には人間による文化的活動が存在しており、有形文化財の保護や記録は、間接的ではあるが、その背後に存在する無形文化を保護し、記録することに他ならない。雅楽の記録にむけては、本章で整理した西洋音楽を中心に展開されてきた議論を踏まえながらも、雅楽の文化的特徴にあわせた情報記述モデルの構築が求められる。
      </p>
      <div class="references csl-bib-body hanging-indent" data-entry-spacing="0" id="refs" role="list" style="display: none">
@@ -3164,15 +3086,7 @@ window.Quarto = {
       </li>
       <li id="fn9">
        <p>
-        鍵盤の押す / 離すをそれぞれ
-        <code>
-         Note on
-        </code>
-        /
-        <code>
-         Note off
-        </code>
-        として指示する。
+        鍵盤の押す / 離すをそれぞれ<code>Note on</code>/<code>Note off</code>として指示する。
         <a class="footnote-back" href="#fnref9" role="doc-backlink">
          &larrhk;︎
         </a>
@@ -3204,11 +3118,7 @@ window.Quarto = {
       </li>
       <li id="fn13">
        <p>
-        1を最小、127を最大とする127段階で指示する。シンセサイザーは打鍵の速さを演奏の強さとして認識させているが、速度センサーを搭載していない機材の場合はメゾフォルテ付近に相当する64が指定される。0は無音であり、Event Typeの
-        <code>
-         Note off
-        </code>
-        と同様イベントの終わりを指示するために用いられる。
+        1を最小、127を最大とする127段階で指示する。シンセサイザーは打鍵の速さを演奏の強さとして認識させているが、速度センサーを搭載していない機材の場合はメゾフォルテ付近に相当する64が指定される。0は無音であり、Event Typeの<code>Note off</code>と同様イベントの終わりを指示するために用いられる。
         <a class="footnote-back" href="#fnref13" role="doc-backlink">
          &larrhk;︎
         </a>
@@ -3240,11 +3150,7 @@ window.Quarto = {
       </li>
       <li id="fn15">
        <p>
-        括弧内の等幅フォントで示された
-        <code>
-         n
-        </code>
-        は任意の自然数を示す。
+        括弧内の等幅フォントで示された<code>n</code>は任意の自然数を示す。
         <a class="footnote-back" href="#fnref15" role="doc-backlink">
          &larrhk;︎
         </a>
@@ -3468,7 +3374,7 @@ window.Quarto = {
         <span class="citation" data-cites="Patrick1975">
          (
          <a href="references.html#ref-Patrick1975" role="doc-biblioref">
-          Patrick and Friedman 1975
+          Patrick と Friedman 1975
          </a>
          )
         </span>
@@ -3500,11 +3406,11 @@ window.Quarto = {
         <span class="citation" data-cites="加藤1999 Schreibman2024">
          (
          <a href="references.html#ref-加藤1999" role="doc-biblioref">
-          加藤 ・水野 1999
+          加藤 と 水野 1999
          </a>
          ;
          <a href="references.html#ref-Schreibman2024" role="doc-biblioref">
-          Schreibman and ISGMLUG 2024
+          Schreibman と ISGMLUG 2024
          </a>
          )
         </span>
@@ -3576,91 +3482,7 @@ window.Quarto = {
       </li>
       <li id="fn38">
        <p>
-        アクセント記号を持たない文字コードでテキストを構成することが求められるような環境でアクセント記号付きの文字を表現する場合など、テキストにおいても使用されている文字を直接扱えないケースが存在しないわけではない。このような場合には、いくつかの記号を組み合わせて対象のアクセント付き文字を表現する翻字によって対応される事が多い。例えば、plainTeX で特殊文字を使用する場合、 &oacute;：
-        <code>
-         \'o
-        </code>
-        、 &ograve;：
-        <code>
-         \`o
-        </code>
-        、 &ocirc;：
-        <code>
-         \^o
-        </code>
-        、 &ouml;：
-        <code>
-         \"o
-        </code>
-        、 &otilde;：
-        <code>
-         \~o
-        </code>
-        、 &omacr;：
-        <code>
-         \=o
-        </code>
-        、 &zdot;：
-        <code>
-         \.z
-        </code>
-        、 &ccedil;：
-        <code>
-         \c{c}
-        </code>
-        、 &scaron;：
-        <code>
-         \v{s}
-        </code>
-        、 &abreve;：
-        <code>
-         \u{a}
-        </code>
-        、 &uring;：
-        <code>
-         \r{u}
-        </code>
-        、 &odblac;：
-        <code>
-         \H{o}
-        </code>
-        、 ọ：
-        <code>
-         \d{o}
-        </code>
-        、 b̲：
-        <code>
-         \b{b}
-        </code>
-        、 T͡S：
-        <code>
-         \t{ts}
-        </code>
-        、 &Oslash;：
-        <code>
-         \O
-        </code>
-        、 &Lstrok;：
-        <code>
-         \L
-        </code>
-        、 &lstrok;：
-        <code>
-         \l
-        </code>
-        、 &Aring;：
-        <code>
-         \AA
-        </code>
-        、 &inodot;：
-        <code>
-         \i
-        </code>
-        、 &jmath;：
-        <code>
-         \j
-        </code>
-        、 のような翻字表記が用いられる。もちろん、自然言語に存在する文字記号はさらに多く、同様の方法を使ってさらに多くの言語が用いる特殊文字に対応したパッケージが開発されている。
+        アクセント記号を持たない文字コードでテキストを構成することが求められるような環境でアクセント記号付きの文字を表現する場合など、テキストにおいても使用されている文字を直接扱えないケースが存在しないわけではない。このような場合には、いくつかの記号を組み合わせて対象のアクセント付き文字を表現する翻字によって対応される事が多い。例えば、plainTeX で特殊文字を使用する場合、 &oacute;：<code>\'o</code>、 &ograve;：<code>\`o</code>、 &ocirc;：<code>\^o</code>、 &ouml;：<code>\"o</code>、 &otilde;：<code>\~o</code>、 &omacr;：<code>\=o</code>、 &zdot;：<code>\.z</code>、 &ccedil;：<code>\c{c}</code>、 &scaron;：<code>\v{s}</code>、 &abreve;：<code>\u{a}</code>、 &uring;：<code>\r{u}</code>、 &odblac;：<code>\H{o}</code>、 ọ：<code>\d{o}</code>、 b̲：<code>\b{b}</code>、 T͡S：<code>\t{ts}</code>、 &Oslash;：<code>\O</code>、 &Lstrok;：<code>\L</code>、 &lstrok;：<code>\l</code>、 &Aring;：<code>\AA</code>、 &inodot;：<code>\i</code>、 &jmath;：<code>\j</code>、 のような翻字表記が用いられる。もちろん、自然言語に存在する文字記号はさらに多く、同様の方法を使ってさらに多くの言語が用いる特殊文字に対応したパッケージが開発されている。
         <a class="footnote-back" href="#fnref38" role="doc-backlink">
          &larrhk;︎
         </a>
